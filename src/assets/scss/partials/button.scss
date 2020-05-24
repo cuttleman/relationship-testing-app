@@ -1,0 +1,21 @@
+.slide__content{
+    position: relative;
+    .buttons{
+        position: absolute;
+        left:0;
+        right:0;
+        bottom:-80px;
+        margin:auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,30px);
+        grid-gap: 10px;
+    }
+    .sharedBtn {
+        position: absolute;
+        left:0;
+        right:0;
+        bottom:-80px;
+        margin:auto;
+    }
+}

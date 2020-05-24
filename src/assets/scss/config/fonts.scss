@@ -1,0 +1,16 @@
+@font-face{
+    font-family: "Amatic-Bold";
+    src: url("/fonts/Amatic-Bold.eot");
+    src: url("/fonts/Amatic-Bold.eot?iefix") format("embedded-opentype"),
+    url("/fonts/Amatic-Bold.woff") format("woff"),
+    url("/fonts/Amatic-Bold.ttf") format("truetype");
+    src:local("@"),url("/fonts/Amatic-Bold.woff") format("woff");
+}
+@font-face{
+    font-family: "AmaticSC-Regular";
+    src: url("/fonts/AmaticSC-Regular.eot");
+    src: url("/fonts/AmaticSC-Regular.eot?iefix") format("embedded-opentype"),
+    url("/fonts/AmaticSC-Regular.woff") format("woff"),
+    url("/fonts/AmaticSC-Regular.ttf") format("truetype");
+    src:local("@"),url("/fonts/AmaticSC-Regular.woff") format("woff");
+}

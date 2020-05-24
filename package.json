@@ -1,0 +1,30 @@
+{
+  "name": "phyco",
+  "version": "1.0.0",
+  "description": "Psychological test app",
+  "main": "index.js",
+  "author": "juno lee",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-webserver2": "^0.9.2",
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "imgbundle": "gulp img",
+    "bundle": "gulp dev",
+    "deploy": "gulp deploy"
+  }
+}
