@@ -1,4 +1,4 @@
-const resultContainer = document.querySelector(".result");
+const main = document.querySelector("main");
 const typeOne = document.querySelector(".type.type-one");
 const typeTwo = document.querySelector(".type.type-two");
 const typeThree = document.querySelector(".type.type-three");
@@ -10,30 +10,30 @@ export const resultCases = (selectNums = []) => {
   const three = selectNums.filter((num) => num === "3").length;
   const four = selectNums.filter((num) => num === "4").length;
   if (one > two && one > three && one > four) {
-    resultContainer.classList.add("type-one");
+    main.classList.add("typeOne");
     typeOne.classList.add("show");
   } else if (two > one && two > three && two > four) {
-    resultContainer.classList.add("type-two");
+    main.classList.add("typeTwo");
     typeTwo.classList.add("show");
   } else if (three > one && three > two && three > four) {
-    resultContainer.classList.add("type-three");
+    main.classList.add("typeThree");
     typeThree.classList.add("show");
   } else if (four > one && four > two && four > three) {
-    resultContainer.classList.add("type-four");
+    main.classList.add("typeFour");
     typeFour.classList.add("show");
   } else {
     if (one === two && one === three && one === four) {
-      resultContainer.classList.add("type-three");
+      main.classList.add("typeThree");
       typeThree.classList.add("show");
     } else if (one === two && one === four) {
-      resultContainer.classList.add("type-two");
+      main.classList.add("typeTwo");
       typeTwo.classList.add("show");
     } else if (one === four) {
-      resultContainer.classList.add("type-four");
+      main.classList.add("typeFour");
       typeFour.classList.add("show");
     } else {
       // 나머지 경우의 수 한 곳에 몰아넣음
-      resultContainer.classList.add("type-three");
+      main.classList.add("typeThree");
       typeThree.classList.add("show");
     }
   }

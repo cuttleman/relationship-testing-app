@@ -5,8 +5,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        height: 80vh;
+        justify-content: center;
         .content__row{
             display: flex;
             flex-direction: column;
@@ -16,16 +15,17 @@
                 width: fit-content;
                 display: flex;
                 justify-content: center;
+                margin-top: 30px;
                 margin-bottom: 5px;
-                .description{
+                img.description{
                     position: absolute;
                     top: -28px;
-                    right: -46px;
-                    width: 130px;
+                    right: -48px;
+                    height: 33px;
                 }
-                .main{
+                img.main{
                     margin-left: 10px;
-                    width: 150px;
+                    height: 100px;
                 }
             }
             .title{
@@ -59,19 +59,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 25px 0;
             img{
-                width: 200px;
+                height: 205px;
             }
         }
         .startBtn {
             margin-left: 20px;
             width: fit-content;
-            button {
+            .button {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 img{
-                    width: 140px;
+                    height: 96px;
                 }
             }
         }
