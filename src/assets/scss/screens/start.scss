@@ -74,9 +74,9 @@
                 img{
                     height: 105px;
                 }
+                -webkit-tap-highlight-color: transparent;
                 &:active{
-                    background-color: transparent;
-                    outline: none;
+                    -webkit-tap-highlight-color: transparent;
                 }
             }
         }

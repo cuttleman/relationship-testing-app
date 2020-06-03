@@ -99,9 +99,9 @@
                         height: 130px;
                         animation: ready 1s linear infinite;
                     }
+                    -webkit-tap-highlight-color: transparent;
                     &:active{
-                        background-color: transparent;
-                        outline: none;
+                        -webkit-tap-highlight-color: transparent;
                     }
                 }
             }
