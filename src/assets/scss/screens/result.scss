@@ -10,7 +10,7 @@
                     margin-bottom:10px;
                     span {
                         font-family: "SCDream7";
-                        font-size: 25px;
+                        font-size: 30px;
                     }
                 }
                 .title__battery{
@@ -27,7 +27,7 @@
                     span{
                         font-family: 'Noto Sans KR', sans-serif;
                         font-weight: 500;
-                        font-size: 17px;
+                        font-size: 18px;
                         strong{
                             font-family: 'Noto Sans KR', sans-serif;
                             font-weight: 900;
@@ -40,11 +40,11 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                margin: 20px 0;
+                margin: 35px 0;
                 .mainImage{
-                    margin-bottom: 15px;
+                    margin-bottom: 25px;
                     img{
-                        height: 250px;
+                        height: 270px;
                     }
                 }
                 .info{
@@ -53,12 +53,12 @@
                     margin-bottom: 15px;
                     span{
                         font-family: "SCDream5";
-                        font-size: 20px;
+                        font-size: 22px;
                         color: #ec5a56;
                         strong{
                             font-family: "SCDream6";
                             color: #6e1717;
-                            font-size: 26px;
+                            font-size: 28px;
                         }
                     }
                 }
@@ -66,7 +66,7 @@
                     color: #8d5755;
                     .good,
                     .bad{
-                        font-size: 17px;
+                        font-size: 18px;
                         font-family: "SCDream5";
                         &:not(:last-child){
                             margin-bottom: 4px;
@@ -84,7 +84,7 @@
                     justify-content: center;
                     align-items: center;
                     img{
-                        height: 44px;
+                        height: 45px;
                     }
                 }
                 .addThis{

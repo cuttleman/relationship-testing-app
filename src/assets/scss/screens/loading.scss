@@ -13,13 +13,13 @@
             .questionTitle{
                 text-align: center;
                 line-height: 1.4;
-                font-size: 20px;
+                font-size: 21px;
                 margin-bottom: 17px;
                 span {
                     font-family: "SCDream5";
                     focus{
                         color: #ed6461;
-                        font-size: 21px;
+                        font-size: 22px;
                     }
                 }
             }
@@ -27,7 +27,7 @@
                 text-align: center;
                 line-height: 1.5;
                 span{
-                    font-size: 21px;
+                    font-size: 22px;
                     font-family: "SCDream6";
                     focus{
                         color: #6e1717;
@@ -36,9 +36,9 @@
             }
         }
         .bookImage{
-            margin: 25px 0;
+            margin: 40px 0;
             img{
-                height: 200px;
+                height: 260px;
             }
         }
         .loadingComment{
@@ -49,6 +49,7 @@
                 text-align: center;
                 line-height: 1.2;
                 span{
+                    font-size: 17px;
                     font-family: "SCDream5";
                     color: #8d5755;
                     focus{
@@ -67,6 +68,7 @@
                 margin: 10px 0;
                 span{
                     color: white;
+                    font-size: 17px;
                     margin: 0 5px;
                 }
                 .dot{
@@ -94,7 +96,7 @@
                 width: fit-content;
                 .button{
                     img{
-                        height: 120px;
+                        height: 130px;
                         animation: ready 1s linear infinite;
                     }
                 }
