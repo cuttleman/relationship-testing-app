@@ -20,8 +20,10 @@ body,html {
         width: 100%;
         background-color: gray;
         z-index: 20;
+        display: none;
     }
     .actionBarArea{
+        display: none;
         position: fixed;
         bottom: 0;
         margin: auto;
