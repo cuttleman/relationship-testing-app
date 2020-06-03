@@ -1,0 +1,21 @@
+@import "../config/_colors";
+.type-three{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80vh;
+    .title{
+        .title__type{
+            span{
+                color: $type-three-title;
+            }
+        }
+        .title__battery{
+            background-color: $type-three-battery;
+        }
+    }
+}
+.type-three.show{
+    display: flex;
+}

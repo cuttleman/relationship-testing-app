@@ -1,0 +1,21 @@
+@import "../config/_colors";
+.type-four{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80vh;
+    .title{
+        .title__type{
+            span{
+                color: $type-four-title;
+            }
+        }
+        .title__battery{
+            background-color: $type-four-battery;
+        }
+    }
+}
+.type-four.show{
+    display: flex;
+}

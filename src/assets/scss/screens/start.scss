@@ -1,0 +1,79 @@
+@import "../config/_colors.scss";
+
+.start {
+    .slide__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 80vh;
+        .content__row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .topImage{
+                position: relative;
+                width: fit-content;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 5px;
+                .description{
+                    position: absolute;
+                    top: -28px;
+                    right: -46px;
+                    width: 130px;
+                }
+                .main{
+                    margin-left: 10px;
+                    width: 150px;
+                }
+            }
+            .title{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                div:nth-child(1){
+                    font-family: "SCDream6";
+                    font-size: 28px;
+                    margin-bottom: 7px;
+                }
+                div:nth-child(2){
+                    font-family: "SCDream7";
+                    font-size: 36px;
+                    color: #6e1717;
+                    margin-bottom: 7px;
+                }
+                div:nth-child(3){
+                    width: 100%;
+                    text-align: center;
+                    font-family: "SCDream5";
+                    padding: 7px 9px;
+                    font-size: 14px;
+                    color: $default-bg;
+                    background-color: #f3a09e;
+                    border-radius: 10px;
+                }
+            }
+        }
+        .bookImage{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 200px;
+            }
+        }
+        .startBtn {
+            margin-left: 20px;
+            width: fit-content;
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 140px;
+                }
+            }
+        }
+    }
+}

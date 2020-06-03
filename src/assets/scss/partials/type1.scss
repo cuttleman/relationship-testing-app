@@ -1,0 +1,21 @@
+@import "../config/_colors";
+.type-one{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80vh;
+    .title{
+        .title__type{
+            span{
+                color: $type-one-title;
+            }
+        }
+        .title__battery{
+            background-color: $type-one-battery;
+        }
+    }
+}
+.type-one.show{
+    display: flex;
+}

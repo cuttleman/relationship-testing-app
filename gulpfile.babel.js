@@ -2,66 +2,58 @@ import gulp from "gulp";
 import autoprefixer from "gulp-autoprefixer";
 import csso from "gulp-csso";
 import concat from "gulp-concat";
-import imagemin from "gulp-imagemin";
 import sass from "gulp-sass";
 import pug from "gulp-pug";
 import del from "del";
 import ghPages from "gulp-gh-pages";
 import webserver from "gulp-webserver2";
+import babelify from "babelify";
+import bro from "gulp-bro";
+import uglify from "gulp-uglify";
 
 sass.compiler = require("node-sass");
 
 const paths = {
-  img: {
-    src: "src/images/**/*",
-    dest: "bundle/images",
-    watch: "src/images/**/*",
-  },
   scss: {
     src: "src/assets/scss/**/*.scss",
-    dest: "bundle",
+    dest: "build",
     watch: "src/assets/scss/**/*.scss",
-  },
-  font: {
-    src: "src/assets/fonts/*",
-    dest: "bundle/fonts",
   },
   js: {
     src: "src/assets/js/*.js",
-    dest: "bundle",
+    dest: "build",
     watch: "src/assets/js/**/*.js",
   },
   pug: {
     src: "src/views/**/*.pug",
-    dest: "bundle",
+    dest: "build",
     watch: "src/views/**/*.pug",
   },
 };
 
 function clean() {
-  return del(["bundle"]);
+  return del(["build"]);
 }
 
 function publishClean() {
   return del([".publish"]);
 }
 
-function fonts() {
-  return gulp.src(paths.font.src).pipe(gulp.dest(paths.font.dest));
-}
-
 function js() {
   return gulp
     .src(paths.js.src)
+    .pipe(
+      bro({
+        transform: [
+          babelify.configure({
+            presets: ["@babel/preset-env"],
+          }),
+        ],
+      })
+    )
+    .pipe(uglify())
     .pipe(concat("main.js"))
     .pipe(gulp.dest(paths.js.dest));
-}
-
-function image() {
-  return gulp
-    .src(paths.img.src)
-    .pipe(imagemin())
-    .pipe(gulp.dest(paths.img.dest));
 }
 
 function styles() {
@@ -89,7 +81,7 @@ function watch() {
 }
 
 function server() {
-  return gulp.src("bundle").pipe(
+  return gulp.src("build").pipe(
     webserver({
       livereload: true,
       open: true,
@@ -98,21 +90,11 @@ function server() {
 }
 
 function _deploy() {
-  return gulp.src("bundle/**/*").pipe(ghPages());
+  return gulp.src("build/**/*").pipe(ghPages());
 }
 
-export const img = gulp.series([image]);
+export const dev = gulp.series([clean, styles, template, js, server, watch]);
 
-export const dev = gulp.series([
-  clean,
-  fonts,
-  styles,
-  template,
-  js,
-  server,
-  watch,
-]);
-
-const build = gulp.series([clean, styles, template, js, image]);
+const build = gulp.series([clean, styles, template, js]);
 
 export const deploy = gulp.series([build, publishClean, _deploy]);
