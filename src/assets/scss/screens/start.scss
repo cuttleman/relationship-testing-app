@@ -74,6 +74,10 @@
                 img{
                     height: 105px;
                 }
+                &:active{
+                    background-color: transparent;
+                    outline: none;
+                }
             }
         }
     }

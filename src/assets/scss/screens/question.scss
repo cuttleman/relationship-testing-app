@@ -87,7 +87,6 @@
                     text-align: center;
                     line-height: 1.3;
                 }
-                transition: all 0.2s linear;
                 &:active {
                     background-color: $selectBtn-shadow;
                     transform: translateY(1px);

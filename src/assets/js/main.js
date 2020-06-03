@@ -11,7 +11,6 @@ const nextSlideEvent = (
   vertical = false,
   event = null
 ) => {
-  console.log(window.innerHeight);
   if (event) {
     const { id: parent } = event.target.parentNode.dataset;
     const { id: child } = event.target.dataset;
@@ -48,17 +47,11 @@ const nextSlideEvent = (
     activeEl.animate(
       // 실행 시점에선 nextEl은 Prev 상태의 Element를 가리킴
       {
-        transform: resultScreen
-          ? []
-          : isSlide
-          ? vertical
-            ? []
-            : [`translateX(0)`, `translateX(-${WINDOW}px)`]
-          : [],
+        transform: resultScreen ? [] : isSlide ? (vertical ? [] : []) : [],
         zIndex: [1, 1],
         opacity: [1, 0],
       },
-      { duration: duration ? duration : 0, fill: "forwards" }
+      { duration: duration ? duration - 200 : 0, fill: "forwards" }
     );
     nextEl.animate(
       // 실행 시점에선 nextEl은 현재 Active 상태의 Element를 가리킴
@@ -79,10 +72,10 @@ const nextSlideEvent = (
         delay: resultScreen
           ? opacityDuration + 2000
           : loadingScreen
-          ? opacityDuration + 800
+          ? opacityDuration + 300
           : vertical
           ? opacityDuration - 300
-          : opacityDuration,
+          : opacityDuration - 200,
       }
     );
     // select 버튼 이벤트 nesting 오류 fix

@@ -99,6 +99,10 @@
                         height: 130px;
                         animation: ready 1s linear infinite;
                     }
+                    &:active{
+                        background-color: transparent;
+                        outline: none;
+                    }
                 }
             }
         }
