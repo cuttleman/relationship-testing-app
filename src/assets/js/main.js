@@ -100,13 +100,26 @@ const nextSlideEvent = (
 };
 
 const init = () => {
-  document.addEventListener(
-    "touchmove",
+  document.documentElement.addEventListener(
+    "touchstart",
     function (event) {
-      event = event.originalEvent || event;
-      if (event.scale !== 1) {
+      if (event.touches.length > 1) {
         event.preventDefault();
       }
+    },
+    false
+  );
+
+  var lastTouchEnd = 0;
+
+  document.documentElement.addEventListener(
+    "touchend",
+    function (event) {
+      var now = new Date().getTime();
+      if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+      }
+      lastTouchEnd = now;
     },
     false
   );
