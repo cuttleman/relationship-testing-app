@@ -97,4 +97,4 @@ export const dev = gulp.series([clean, styles, template, js, server, watch]);
 
 const build = gulp.series([clean, styles, template, js]);
 
-export const deploy = gulp.series([build, publishClean, _deploy]);
+export const deploy = gulp.series([publishClean, _deploy]);

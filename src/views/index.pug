@@ -2,16 +2,16 @@
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" )
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        meta(name="HandheldFriendly" content="true")
         meta(property="og:image" content="")
         meta(property="og:title" content="관태기 테스트")
-        meta(property="og:description" content="관계에 권태기가 온 건 아닐까? 한번 테스트 해보세요!")
+        meta(property="og:description" content="관계에 권태기가 온 건 아닐까?")
         link(rel="stylesheet", href="styles.css")
         link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;900&display=swap" rel="stylesheet")
         title 관태기 테스트
     body(oncontextmenu="return false" ondragstart="return false" onselectstart="return false")
         main
-            //- .urlArea
             #jsSlider.slider
                 include screens/start
                 include screens/question1
@@ -27,6 +27,5 @@ html(lang="en")
                 include screens/question11
                 include screens/loading
                 include screens/result
-            //- .actionBarArea
         script(src="main.js")
-        script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ec9216c01abc74d")
+        //- script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ec9216c01abc74d")
