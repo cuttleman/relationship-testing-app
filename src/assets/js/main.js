@@ -99,30 +99,29 @@ const nextSlideEvent = (
   }
 };
 
+let lastTouchEnd = 0;
+
+const touchEndPrevent = (event) => {
+  const now = new Date().getTime();
+  if (now - lastTouchEnd <= 300) {
+    event.preventDefault();
+  }
+  lastTouchEnd = now;
+};
+
+const touchStartPrevent = (event) => {
+  if (event.touches.length > 1) {
+    event.preventDefault();
+  }
+};
+
 const init = () => {
   document.documentElement.addEventListener(
     "touchstart",
-    function (event) {
-      if (event.touches.length > 1) {
-        event.preventDefault();
-      }
-    },
+    touchStartPrevent,
     false
   );
-
-  var lastTouchEnd = 0;
-
-  document.documentElement.addEventListener(
-    "touchend",
-    function (event) {
-      var now = new Date().getTime();
-      if (now - lastTouchEnd <= 300) {
-        event.preventDefault();
-      }
-      lastTouchEnd = now;
-    },
-    false
-  );
+  document.documentElement.addEventListener("touchend", touchEndPrevent, false);
   nextSlideEvent();
   selectBtn.forEach(
     (button) =>
@@ -130,7 +129,6 @@ const init = () => {
         nextSlideEvent(600, 800, true, false, event)
       ) // 애니메이션 속도, 딜레이시간, 슬라이드 온오프(기본 fasle)
   );
-  // setInterval(() => nextSlideEvent(1000), 3500);
 };
 
 init();
