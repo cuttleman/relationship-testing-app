@@ -29,15 +29,15 @@ body,html {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 17px;
-        font-family: 'SCDream5';
+        font-size: 15px;
+        font-family: 'Gothic A1', sans-serif;
         img{
             animation:spin 2.3s linear infinite;
             width: 40px;
             margin-bottom:15px;
         }
         div{
-            animation: loading 2.3s linear infinite;
+            animation: loading 1.6s linear infinite;
         }
     }
     main{

@@ -138,7 +138,7 @@ const init = () => {
     setTimeout(() => {
       loadedMain.style.display = "flex";
       loadingAni.style.display = "none";
-    }, 1000);
+    }, 1500);
   });
 
   nextSlideEvent();
