@@ -18,19 +18,19 @@ body,html {
     main{
         &.typeOne{
             background-color: $type-one;
-            transition: all 4s linear;
+            transition: all 0.8s linear;
         }
         &.typeTwo{
             background-color: $type-two;
-            transition: all 4s linear;
+            transition: all 0.8s linear;
         }
         &.typeThree{
             background-color: $type-three;   
-            transition: all 4s linear;
+            transition: all 0.8s linear;
         }
         &.typeFour{
             background-color: $type-four;
-            transition: all 4s linear;
+            transition: all 0.8s linear;
         }
         display: flex;
         flex-direction: column;
@@ -38,23 +38,6 @@ body,html {
         align-items: center;
         width: 100%;
         height: 100%;
-        // .urlArea{
-        //     position: fixed;
-        //     top:0;
-        //     height: 45pt;
-        //     width: 100%;
-        //     background-color: gray;
-        //     z-index: 20;
-        // }
-        // .actionBarArea{
-        //     position: fixed;
-        //     bottom: 0;
-        //     margin: auto;
-        //     height: 45pt;
-        //     width: 100%;
-        //     background-color: gray;
-        //     z-index: 20;
-        // }
         .slider {
             width: 100%;
             .slide {

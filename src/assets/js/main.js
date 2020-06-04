@@ -70,7 +70,7 @@ const nextSlideEvent = (
         duration: duration ? duration : 0,
         fill: "forwards",
         delay: resultScreen
-          ? opacityDuration + 2000
+          ? opacityDuration
           : loadingScreen
           ? opacityDuration + 300
           : vertical
@@ -89,7 +89,16 @@ const nextSlideEvent = (
     } else {
       nextEl.nextElementSibling.id = NEXT;
     }
-
+    // loading finish animation
+    if (loadingScreen) {
+      const loadingEl = document.getElementById("jsLoadingAnimation");
+      const resultGoEl = document.getElementById("jsResultBtn");
+      setTimeout(() => {
+        loadingEl.innerHTML = "<span>분석 완료</span>";
+        resultGoEl.style.opacity = "1";
+        resultGoEl.style.pointerEvents = "initial";
+      }, 4000);
+    }
     // result image convert
     if (selectNums.length === 12) {
       setTimeout(() => {

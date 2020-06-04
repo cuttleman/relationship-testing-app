@@ -74,16 +74,17 @@
                 padding: 12px 0;
                 border-radius: 10px;
                 box-shadow: 2px 2px 4px $selectBtn-shadow;
-                font-family: "SCDream6";
-                font-size: 15px;
+                font-size: 16px;
                 display: flex;
                 align-items: center;
                 span:nth-child(1){
-                    font-family: "SCDream5";
-                    margin-left: 10px;
+                    font-family: 'Gothic A1', sans-serif;
+                    font-weight: 800;
+                    margin-left: 12px;
                 }
                 span:nth-child(2){
                     width: 100%;
+                    font-family: "SCDream6";
                     text-align: center;
                     line-height: 1.3;
                 }
