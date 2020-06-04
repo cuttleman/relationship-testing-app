@@ -15,6 +15,31 @@ body,html {
     &:hover{
         cursor: default;
     }
+    .resorceLoading{
+        position: fixed;
+        background-color: $default-bg;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        margin:auto;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        font-family: 'SCDream5';
+        img{
+            animation:spin 2.3s linear infinite;
+            width: 40px;
+            margin-bottom:15px;
+        }
+        div{
+            animation: loading 2.3s linear infinite;
+        }
+    }
     main{
         &.typeOne{
             background-color: $type-one;
@@ -32,12 +57,13 @@ body,html {
             background-color: $type-four;
             transition: all 0.8s linear;
         }
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 100%;
+        animation: loaded 1s linear forwards;
         .slider {
             width: 100%;
             .slide {
@@ -56,5 +82,33 @@ body,html {
                 pointer-events: none;
             }
         }
+    }
+}
+
+@keyframes loaded{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes loading{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes spin {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform:rotate(360deg);
     }
 }

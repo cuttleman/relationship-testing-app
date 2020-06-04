@@ -2,6 +2,8 @@ import { resultCases } from "./resultCases";
 
 const selectBtn = document.querySelectorAll(".button");
 const first = document.querySelector(".slide:nth-child(1)");
+const loadedMain = document.querySelector("main");
+const loadingAni = document.getElementById("jsResorceLoading");
 
 const selectNums = [];
 const nextSlideEvent = (
@@ -131,7 +133,16 @@ const init = () => {
     false
   );
   document.documentElement.addEventListener("touchend", touchEndPrevent, false);
+
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      loadedMain.style.display = "flex";
+      loadingAni.style.display = "none";
+    }, 1000);
+  });
+
   nextSlideEvent();
+
   selectBtn.forEach(
     (button) =>
       button.addEventListener("click", (event) =>
