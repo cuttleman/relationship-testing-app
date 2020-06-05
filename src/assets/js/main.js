@@ -45,14 +45,15 @@ const nextSlideEvent = (duration = 0, event = null) => {
 
     first.removeAttribute("style");
     activeEl.removeAttribute("style");
-    const loadingScreen = nextEl.className.includes("loading");
+    const loadingScreen = document.querySelector(".loading");
 
     // select 버튼 이벤트 nesting 오류 fix
     setTimeout(() => {
       nextEl.style.pointerEvents = "initial";
-    }, duration + 500);
+    }, duration + 200);
+
     // loading finish animation
-    if (loadingScreen) {
+    if (loadingScreen.id === "active") {
       const loadingEl = document.getElementById("jsLoadingAnimation");
       const resultGoEl = document.getElementById("jsResultBtn");
       setTimeout(() => {
@@ -101,10 +102,11 @@ const init = () => {
   });
 
   nextSlideEvent();
-  selectBtn.forEach(
-    (button) =>
-      button.addEventListener("click", (event) => nextSlideEvent(600, event)) // 애니메이션 속도, 클릭이벤트
-  );
+  for (let i = 0; i < selectBtn.length; i++) {
+    selectBtn[i].addEventListener("click", (event) =>
+      nextSlideEvent(600, event)
+    ); // 딜레이 속도, 클릭이벤트
+  }
 };
 
 init();

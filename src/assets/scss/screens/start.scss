@@ -1,6 +1,10 @@
-@import "../config/_colors.scss";
+@import "../config/_colors";
+@import "../config/_animation";
 
 .start {
+    &#prev{
+        animation: $activeElSlide;
+    }
     .slide__content{
         display: flex;
         flex-direction: column;
@@ -59,9 +63,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 30px 0;
+            margin: 25px 0;
             img{
-                height: 250px;
+                height: 230px;
             }
         }
         .startBtn {
