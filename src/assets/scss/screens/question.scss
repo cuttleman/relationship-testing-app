@@ -1,6 +1,13 @@
-@import "../config/_colors";
+@import "../config/colors";
+@import "../config/animation";
 
 .question{
+    &#prev{
+        animation: $activeElSlide;
+    }
+    &#active{
+        animation: $nextElSlide;
+    }
     .slide__content{
         display: flex;
         flex-direction: column;
@@ -22,7 +29,7 @@
             position: relative;
             margin-top: 40px;
             margin-bottom: 15px;
-            background-color: #ffffff60;
+            background-color: rgba(255, 255, 255, 0.5);
             border-radius: 10px;
             padding-top: 70px;
             padding-bottom: 10px;
@@ -30,13 +37,10 @@
             justify-content: center;
             .count{
                 position: absolute;
-                top:-28px;
-                left:0;
-                right:0;
-                margin: auto;
-                width: fit-content;
+                top:-26px;
+                margin: 0 auto;
                 img{
-                    height: 50px;
+                    height: 55px;
                 }
             }
             .main{
@@ -58,7 +62,7 @@
                     justify-content: center;
                     align-items: center;
                     img {
-                        height: 250px;
+                        height: 230px;
                     }
                 }
             }

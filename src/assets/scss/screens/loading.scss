@@ -1,5 +1,12 @@
 @import "../config/_colors";
+@import "../config/_animation";
 .loading{
+    &#prev{
+        animation: $activeElSlide;
+    }
+    &#active{
+        animation: $nextElSlide
+    }
     .slide__content{
         display: flex;
         flex-direction: column;
@@ -30,7 +37,7 @@
                     font-size: 22px;
                     font-family: "SCDream6";
                     focus{
-                        color: #6e1717;
+                        color: rgb(110, 23, 23);
                     }
                 }
             }
@@ -51,10 +58,10 @@
                 span{
                     font-size: 17px;
                     font-family: "SCDream5";
-                    color: #8d5755;
+                    color: rgb(141, 87, 85);
                     focus{
                         font-family: "SCDream6";
-                        color: #6e1717;
+                        color: rgb(110, 23, 23);
                     }
                 }
             }
@@ -62,13 +69,14 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: $loading;
+                background-color: $loadingBar;
                 border-radius: 10px;
                 padding: 5px 20px;
                 margin: 10px 0;
                 span{
-                    color: white;
-                    font-size: 17px;
+                    font-family: "SCDream5";
+                    color: rgb(255, 255, 255);
+                    font-size: 16px;
                     margin: 0 5px;
                 }
                 .dot{

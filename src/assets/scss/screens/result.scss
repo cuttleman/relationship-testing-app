@@ -1,5 +1,9 @@
 @import "../config/_colors";
+@import "../config/_animation";
 .result{
+    &#active {
+        animation: $resultSlide;
+    }
     .slide__content{
         .type{
             .title{
