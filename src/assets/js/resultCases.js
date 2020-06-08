@@ -22,19 +22,15 @@ export const resultCases = (selectNums = []) => {
     main.classList.add("typeFour");
     typeFour.classList.add("show");
   } else {
-    if (one === two && one === three && one === four) {
+    if (three === one || three === two || three === four) {
       main.classList.add("typeThree");
       typeThree.classList.add("show");
-    } else if (one === two && one === four) {
+    } else if (two === one || two === four) {
       main.classList.add("typeTwo");
       typeTwo.classList.add("show");
     } else if (one === four) {
       main.classList.add("typeFour");
       typeFour.classList.add("show");
-    } else {
-      // 나머지 경우의 수 한 곳에 몰아넣음
-      main.classList.add("typeThree");
-      typeThree.classList.add("show");
     }
   }
 };
