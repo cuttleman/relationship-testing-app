@@ -5,7 +5,21 @@
         animation: $resultSlide;
     }
     .slide__content{
+        width: 100%;
         .type{
+            &.type-one{
+                background-color: $type-one;
+            }
+            &.type-two{
+                background-color: $type-two;
+            }
+            &.type-three{
+                background-color: $type-three;   
+            }
+            &.type-four{
+                background-color: $type-four;
+            }
+            padding: 30px 0;
             .title{
                 display: flex;
                 flex-direction: column;
@@ -42,7 +56,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                margin: 35px 0;
+                margin-top: 35px;
                 .mainImage{
                     margin-bottom: 25px;
                     img{
@@ -79,21 +93,21 @@
                     }
                 }
             }
-            .sharedSNS{
-                .sharedImage{
-                    margin-bottom: 10px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    img{
-                        height: 45px;
-                    }
+        }
+        .sharedSNS{
+            .sharedImage{
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    height: 45px;
                 }
-                .addThis{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
+            }
+            .addThis{
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }

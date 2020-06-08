@@ -7,9 +7,7 @@ const last = document.querySelector(".slide:nth-child(14)");
 const loadedMain = document.querySelector("main");
 const loadingAni = document.getElementById("jsResorceLoading");
 const images = document.querySelectorAll("img");
-
-const deviceWidth = window.innerWidth;
-const deviceHeight = window.innerHeight;
+const resultScreen = document.querySelector(".result");
 
 const selectNums = [];
 const nextSlideEvent = (duration = 0, event = null) => {
@@ -66,28 +64,24 @@ const nextSlideEvent = (duration = 0, event = null) => {
         resultGoEl.style.pointerEvents = "initial";
       }, 4000);
     }
-    const resultScreen = document.querySelector(".result");
-    const resultImage = document.querySelector("main");
-    if (resultScreen.id === "active") {
-      setTimeout(() => {
-        htmlToImage
-          .toPng(resultImage, {
-            width: deviceWidth,
-            height: deviceHeight,
-          })
-          .then(function (dataUrl) {
-            const link = document.createElement("a");
-            link.download = "resultImage.png";
-            link.href = dataUrl;
-            link.click();
-          });
-      }, 2000);
-    }
     // result image convert
     if (selectNums.length === 12) {
       setTimeout(() => {
         resultCases(selectNums);
       }, duration);
+    }
+    //
+    if (resultScreen.id === "active") {
+      const imgDownLink = document.querySelector(
+        ".sharedSNS > .sharedImage > a"
+      );
+      setTimeout(() => {
+        const resultImage = document.querySelector(".show");
+        htmlToImage.toPng(resultImage).then(function (dataUrl) {
+          imgDownLink.download = "userType.png";
+          imgDownLink.href = dataUrl;
+        });
+      }, 1200);
     }
   }
 };
@@ -110,7 +104,8 @@ const touchEndPrevent = (event) => {
 const init = () => {
   console.warn(
     `
-    %c저작권%c이 등록되어있는 작가의 일러스트입니다. 무단 도용시 %c법적 책임%c을 물을 수 있습니다.
+    %c저작권%c이 등록되어있는 작가의 일러스트입니다.
+    무단 도용시 %c법적 책임%c을 물을 수 있습니다.
     `,
     "color: red; font-size: 20px; font-weight:bold",
     "color: black; font-size: 15px; font-weight:bold;",
@@ -125,7 +120,9 @@ const init = () => {
   document.documentElement.addEventListener("touchend", touchEndPrevent, false);
 
   window.addEventListener("load", () => {
-    images.forEach((image) => (image.src = image.dataset.src));
+    for (let i = 0; i < images.length; i++) {
+      images[i].src = images[i].dataset.src;
+    }
     setTimeout(() => {
       loadedMain.style.display = "flex";
       loadingAni.style.display = "none";
