@@ -23,9 +23,9 @@
                 margin-bottom: 5px;
                 img.description{
                     position: absolute;
-                    top: -20px;
-                    left: 20px;
-                    height: 100px;
+                    bottom: 42%;
+                    left: 12%;
+                    height: 75%;
                     animation: $floating;
                 }
                 img.main{
@@ -82,11 +82,9 @@
                 }
                 img:nth-child(2){
                     position: absolute;
-                    top: 5px;
-                    bottom:0;
-                    left: 27px;
-                    margin: auto;
-                    height: 40px;
+                    top: 33%;
+                    left: 17%;
+                    height: 40%;
                     animation: $blinkBlink;
                 }
                 -webkit-tap-highlight-color: transparent;
