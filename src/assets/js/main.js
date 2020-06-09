@@ -126,7 +126,7 @@ const init = () => {
     setTimeout(() => {
       loadedMain.style.display = "flex";
       loadingAni.style.display = "none";
-    }, 500);
+    }, 1000);
   });
 
   nextSlideEvent();

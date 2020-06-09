@@ -58,11 +58,13 @@
                     }
                 }
                 .main__image{
+                    position: relative;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     img {
                         height: 230px;
+                        z-index: 2;
                     }
                 }
             }

@@ -23,9 +23,10 @@
                 margin-bottom: 5px;
                 img.description{
                     position: absolute;
-                    top: -36px;
-                    right: -62px;
-                    height: 43px;
+                    top: -20px;
+                    left: 20px;
+                    height: 100px;
+                    animation: $floating;
                 }
                 img.main{
                     margin-left: 10px;
@@ -72,11 +73,21 @@
             margin-left: 20px;
             width: fit-content;
             .button {
+                position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                img{
+                img:nth-child(1){
                     height: 105px;
+                }
+                img:nth-child(2){
+                    position: absolute;
+                    top: 5px;
+                    bottom:0;
+                    left: 27px;
+                    margin: auto;
+                    height: 40px;
+                    animation: $blinkBlink;
                 }
                 -webkit-tap-highlight-color: transparent;
                 &:active{
