@@ -1,5 +1,8 @@
 @media (max-height: 480px){
     body{
+        .resorceLoading{
+            font-size: 12px;
+        }
         .slider{
             .start{
                 .slide__content{
@@ -25,12 +28,12 @@
                     .bookImage{
                         margin: 15px;
                         img{
-                            height: 150px;
+                            height: 140px;
                         }
                     }
                     .startBtn{
                         .button{
-                            img{
+                            img:nth-child(1){
                                 height: 67px;
                             }
                         }
@@ -128,6 +131,7 @@
         .result{
             .slide__content{
                 .type{
+                    padding: 14px;
                     .title{
                         .title__type{
                             span{
@@ -136,33 +140,33 @@
                         }
                         .title__battery{
                             img{
-                                height: 14px;
+                                height: 13px;
                             }
                             span{
-                                font-size: 14px;    
+                                font-size: 12px;    
                             }
                         }
                     }
                     .content__row{
-                        margin-top: 20px;
+                        margin-top: 15px;
                         .mainImage{
-                            margin-bottom: 15px;
+                            margin-bottom: 10px;
                             img{
-                                height: 180px;
+                                height: 150px;
                             }
                         }
                         .info{
                             span{
-                                font-size: 15px;
+                                font-size: 14px;
                                 strong{
-                                    font-size: 21px;
+                                    font-size: 20px;
                                 }
                             }
                         }
                         .friends{
                             .good,
                             .bad{
-                                font-size: 14px;
+                                font-size: 13px;
                             }
                         }
                     }

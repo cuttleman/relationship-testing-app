@@ -34,15 +34,16 @@
                         .mask{
                             position: absolute;
                             width: 7%;
-                            height: 7%;
-                            clip: rect(0px, 10px, 10px, 0px); 
-                            top: 1.8%;
-                            left: 0;
-                            right: 8%;
-                            margin: auto;
-                            z-index: 3;
+                            height: 5%;
+                            clip: rect(0px, auto, auto, 0px); 
+                            top: 1.4%;
+                            left: 42%;
+                            z-index: 2;
                             img{
-                                height: 70%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                height: 100%;
                                 animation: $upElevator;
                             }
                         }
@@ -152,7 +153,7 @@
                                 left: 3%;
                                 height: 15%;
                                 z-index: 0;
-                                animation: $cloud1;
+                                animation: $cloud1 0.3s;
                             }
                             img:nth-child(2){
                                 position: absolute;
@@ -168,7 +169,7 @@
                                 left: 33%;
                                 height: 10%;
                                 z-index: 0;
-                                animation: $cloud1 1s;
+                                animation: $cloud2 4s;
                             }
                             img:nth-child(4){
                                 position: absolute;
@@ -176,7 +177,7 @@
                                 left: 56%;
                                 height: 19%;
                                 z-index: 0;
-                                animation: $cloud2 1s;
+                                animation: $cloud2 1.5s;
                             }
                             img:nth-child(5){
                                 position: absolute;
@@ -184,7 +185,7 @@
                                 right: 4%;
                                 height: 12%;
                                 z-index: 0;
-                                animation: $cloud2;
+                                animation: $cloud2 0.2s;
                             }
                         }
                     }

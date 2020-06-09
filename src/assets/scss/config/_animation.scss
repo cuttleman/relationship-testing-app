@@ -3,18 +3,18 @@ $nextElSlide: nextElSlide 0.6s linear forwards 0.2s;
 $resultSlide: resultSlide 0.6s linear forwards 0.8s;
 $loaded: loaded 0.8s linear forwards;
 $loading: loading 1.6s linear infinite;
-$floating: floating 3s linear infinite;
+$floating: floating 2.6s linear infinite;
 $blinkBlink: loading 2.3s linear infinite;
 $slowBlinkBlink: slowBlinkBlink 2s linear infinite;
-$vibration: vibration 1s ease-in-out infinite;
-$tail: tail 2s linear infinite;
+$vibration: vibration 1.5s linear infinite;
+$tail: tail 2s ease-in-out infinite;
 $upElevator: upElevator 1.6s linear infinite;
 $spin: spin 2.8s linear infinite;
 $heartBlink: heartBlink;
 $cloud1: cloud1 9s linear infinite;
 $cloud2: cloud2 9s linear infinite;
-$bus1: bus1 6s linear infinite 1s;
-$bus2: bus2 6s linear infinite 0.5s;
+$bus1: bus1 6s linear infinite 1.8s;
+$bus2: bus2 6s linear infinite 0.6s;
 $bus3: bus3 6s linear infinite;
 
 @keyframes activeElSlide {
@@ -109,15 +109,15 @@ $bus3: bus3 6s linear infinite;
 }
 @keyframes vibration{
     0%{
-        transform: rotate(0);
+        transform: translateX(0) rotate(0);
     }5%{
-        transform: rotate(3deg);
-    }20%{
-        transform: rotate(-3deg);
-    }30%{
-        transform: rotate(0);
+        transform: translateX(1px) rotate(2deg);
+    }10%{
+        transform: translateX(-1px) rotate(-2deg);
+    }15%{
+        transform: translateX(0) rotate(2deg);
     }100%{
-        transform: rotate(0);
+        transform: translateX(0) rotate(0);
     }
 }
 @keyframes tail {
@@ -131,7 +131,7 @@ $bus3: bus3 6s linear infinite;
 }
 @keyframes upElevator {
     0%{
-        transform: translateY(-4px);
+        transform: translateY(0px);
         opacity: 1;
     }20%{
         transform: translateY(-15px);
@@ -146,10 +146,10 @@ $bus3: bus3 6s linear infinite;
         transform: translateY(15px);
         opacity: 1;
     }80%{
-        transform: translateY(-4px);
+        transform: translateY(0px);
         opacity: 1;
     }100%{
-        transform: translateY(-4px);
+        transform: translateY(0px);
         opacity: 1;
     }
 }

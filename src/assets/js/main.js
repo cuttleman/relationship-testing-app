@@ -81,7 +81,7 @@ const nextSlideEvent = (duration = 0, event = null) => {
           imgDownLink.download = "userType.png";
           imgDownLink.href = dataUrl;
         });
-      }, 1200);
+      }, 1000);
     }
   }
 };
