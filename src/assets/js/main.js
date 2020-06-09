@@ -1,5 +1,4 @@
 import { resultCases } from "./resultCases";
-import htmlToImage from "html-to-image";
 
 const selectBtn = document.querySelectorAll(".button");
 const first = document.querySelector(".slide:nth-child(1)");
@@ -7,7 +6,6 @@ const last = document.querySelector(".slide:nth-child(14)");
 const loadedMain = document.querySelector("main");
 const loadingAni = document.getElementById("jsResorceLoading");
 const images = document.querySelectorAll("img");
-const resultScreen = document.querySelector(".result");
 
 const selectNums = [];
 const nextSlideEvent = (duration = 0, event = null) => {
@@ -69,18 +67,6 @@ const nextSlideEvent = (duration = 0, event = null) => {
       setTimeout(() => {
         resultCases(selectNums);
       }, duration);
-    }
-    //
-    if (resultScreen.id === "active") {
-      setTimeout(() => {
-        const resultShow = document.querySelector(".show");
-        htmlToImage.toPng(resultShow).then(function (dataUrl) {
-          const sharedImage = document.querySelector(".resultImage");
-          const img = document.createElement("img");
-          img.src = dataUrl;
-          sharedImage.appendChild(img);
-        });
-      }, 1000);
     }
   }
 };

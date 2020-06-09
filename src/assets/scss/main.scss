@@ -1,16 +1,7 @@
 @import "./config/_colors";
 @import "./config/_animation";
 
-@media (orientation: landscape)and(min-width:580px)and (max-width: 900px) {
-    html{
-        body{
-            .preventHorizonMode{
-                display: flex;
-            }
-        }
-    }
-}
-@media (min-width: 901px){
+@media screen and (orientation: portrait){
     html{
         body{
             .preventHorizonMode{

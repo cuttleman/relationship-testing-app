@@ -7,16 +7,24 @@
     .slide__content{
         width: 100%;
         position: relative;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
         .resultImage{
             position: absolute;
             top: 0;
+            bottom: 0;
+            right: 0;
             left: 0;
+            margin: auto;
             width: 100%;
             height: 100%;
             opacity: 0;
             z-index: 2;
             img{
-                width: 100%;
+                height: 100%;
                 -webkit-touch-callout: initial;
                 -webkit-touch-select: initial;
                 -ms-user-select: initial;
@@ -26,18 +34,6 @@
             }
         }
         .type{
-            &.type-one{
-                background-color: $type-one;
-            }
-            &.type-two{
-                background-color: $type-two;
-            }
-            &.type-three{
-                background-color: $type-three;   
-            }
-            &.type-four{
-                background-color: $type-four;
-            }
             padding: 7% 0;
             .title{
                 display: flex;
