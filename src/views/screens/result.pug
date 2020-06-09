@@ -1,12 +1,14 @@
 .slide.result
     .slide__content
+        .resultImage
         include ../partials/type1
         include ../partials/type2
         include ../partials/type3
         include ../partials/type4
-        .sharedSNS
+        .saveImageInfo
+            span 길게 눌러 이미지 저장하기
+        .sharedSNS(oncontextmenu="return false" ondragstart="return false" onselectstart="return false")
             .sharedImage
-                a
-                    img(data-src="https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/%EC%9C%A0%ED%98%95/%EA%B3%B5%EC%9C%A0%ED%95%98%EA%B8%B0.png")
+                img(data-src="https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/%EC%9C%A0%ED%98%95/%EA%B3%B5%EC%9C%A0%ED%95%98%EA%B8%B0.png")
             .addThis
                 //- .addthis_inline_share_toolbox_eouf

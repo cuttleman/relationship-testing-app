@@ -130,7 +130,6 @@
         .result{
             .slide__content{
                 .type{
-                    padding: 14px 0;
                     .title{
                         .title__type{
                             span{
@@ -170,10 +169,15 @@
                         }
                     }
                 }
+                .saveImageInfo{
+                    span{
+                        font-size: 8px;
+                    }
+                }
                 .sharedSNS{
                     .sharedImage{
                         img{
-                            height: 34px;
+                            height: 31px;
                         }
                     }
                 }

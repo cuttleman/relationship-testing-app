@@ -1,5 +1,8 @@
 @media (min-height: 1000px){
     body{
+        .resorceLoading{
+            font-size: 27px;
+        }
         .slider{
             .start{
                 .slide__content{
@@ -24,7 +27,7 @@
                         }
                     }
                     .bookImage{
-                        margin: 17px;
+                        margin: 25px;
                         img{
                             height: 270px;
                         }
@@ -169,6 +172,11 @@
                                 font-size: 26px;
                             }
                         }
+                    }
+                }
+                .saveImageInfo{
+                    span{
+                        font-size: 14px;
                     }
                 }
                 .sharedSNS{

@@ -72,14 +72,13 @@ const nextSlideEvent = (duration = 0, event = null) => {
     }
     //
     if (resultScreen.id === "active") {
-      const imgDownLink = document.querySelector(
-        ".sharedSNS > .sharedImage > a"
-      );
       setTimeout(() => {
-        const resultImage = document.querySelector(".show");
-        htmlToImage.toPng(resultImage).then(function (dataUrl) {
-          imgDownLink.download = "userType.png";
-          imgDownLink.href = dataUrl;
+        const resultShow = document.querySelector(".show");
+        htmlToImage.toPng(resultShow).then(function (dataUrl) {
+          const sharedImage = document.querySelector(".resultImage");
+          const img = document.createElement("img");
+          img.src = dataUrl;
+          sharedImage.appendChild(img);
         });
       }, 1000);
     }
