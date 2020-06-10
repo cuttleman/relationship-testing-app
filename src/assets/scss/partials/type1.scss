@@ -14,6 +14,11 @@
             background-color: $type-one-battery;
         }
     }
+    .saveImageInfo{
+        span{
+            color: #826EB2;
+        }
+    }
 }
 .type-one.show{
     display: flex;

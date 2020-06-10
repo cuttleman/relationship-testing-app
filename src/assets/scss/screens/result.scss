@@ -34,7 +34,7 @@
             }
         }
         .type{
-            padding: 7% 0;
+            margin-bottom: 4%;
             .title{
                 display: flex;
                 flex-direction: column;
@@ -108,18 +108,17 @@
                     }
                 }
             }
-        }
-        .saveImageInfo{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 2%;
-            span{
-                font-size: 13px;
-                font-family: "SCDream6";
-                color: rgb(63, 63, 63);
-                animation: $slowBlinkBlink;
+            .saveImageInfo{
+                margin-top: 7%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span{
+                    font-size: 14px;
+                    font-family: "SCDream5";
+                    animation: $slowBlinkBlink;
+                }
             }
         }
         .sharedSNS{

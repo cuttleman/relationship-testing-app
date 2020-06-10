@@ -16,51 +16,43 @@ export const resultCases = (selectNums = []) => {
   if (one > two && one > three && one > four) {
     main.classList.add("typeOne");
     typeOne.classList.add("show");
-    img.src =
-      "https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/%EA%B3%B5%EC%9C%A0%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9C%A0%ED%98%951.png";
+    img.src = "configs/images/sharedImages/type1.png";
     sharedImage.appendChild(img);
   } else if (two > one && two > three && two > four) {
     main.classList.add("typeTwo");
     typeTwo.classList.add("show");
-    img.src =
-      "https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/%EA%B3%B5%EC%9C%A0%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9C%A0%ED%98%952.png";
+    img.src = "configs/images/sharedImages/type2.png";
     sharedImage.appendChild(img);
   } else if (three > one && three > two && three > four) {
     main.classList.add("typeThree");
     typeThree.classList.add("show");
-    img.src =
-      "https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/%EA%B3%B5%EC%9C%A0%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9C%A0%ED%98%953.png";
+    img.src = "configs/images/sharedImages/type3.png";
     sharedImage.appendChild(img);
   } else if (four > one && four > two && four > three) {
     main.classList.add("typeFour");
     typeFour.classList.add("show");
-    img.src =
-      "https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/%EA%B3%B5%EC%9C%A0%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9C%A0%ED%98%954.png";
+    img.src = "configs/images/sharedImages/type4.png";
     sharedImage.appendChild(img);
   } else {
     if (three === one || three === two || three === four) {
       main.classList.add("typeThree");
       typeThree.classList.add("show");
-      img.src =
-        "https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/%EA%B3%B5%EC%9C%A0%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9C%A0%ED%98%953.png";
+      img.src = "configs/images/sharedImages/type3.png";
       sharedImage.appendChild(img);
     } else if (two === one || two === four) {
       main.classList.add("typeTwo");
       typeTwo.classList.add("show");
-      img.src =
-        "https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/%EA%B3%B5%EC%9C%A0%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9C%A0%ED%98%952.png";
+      img.src = "configs/images/sharedImages/type2.png";
       sharedImage.appendChild(img);
     } else if (one === four) {
       main.classList.add("typeFour");
       typeFour.classList.add("show");
-      img.src =
-        "https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/%EA%B3%B5%EC%9C%A0%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9C%A0%ED%98%954.png";
+      img.src = "configs/images/sharedImages/type4.png";
       sharedImage.appendChild(img);
     } else {
       main.classList.add("typeThree");
       typeThree.classList.add("show");
-      img.src =
-        "https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/%EA%B3%B5%EC%9C%A0%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9C%A0%ED%98%953.png";
+      img.src = "configs/images/sharedImages/type3.png";
       sharedImage.appendChild(img);
     }
   }

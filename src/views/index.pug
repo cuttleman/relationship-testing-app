@@ -8,15 +8,15 @@ html(lang="en")
         meta(property="og:title" content="관태기 테스트")
         meta(property="og:description" content="관계에 권태기가 온 건 아닐까?")
         link(rel="stylesheet", href="styles.css")
-        link(rel="preload" href="https://front-juno.github.io/images-fonts/fonts/scoredream/SCDream5.woff2" as="font" type="font/woff2" crossorigin)
-        link(rel="preload" href="https://front-juno.github.io/images-fonts/fonts/scoredream/SCDream6.woff2" as="font" type="font/woff2" crossorigin)
-        link(rel="preload" href="https://front-juno.github.io/images-fonts/fonts/scoredream/SCDream7.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="configs/fonts/SCDream5.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="configs/fonts/SCDream6.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="configs/fonts/SCDream7.woff2" as="font" type="font/woff2" crossorigin)
         title 관태기 테스트
     body
         .resorceLoading#jsResorceLoading(oncontextmenu="return false" ondragstart="return false" onselectstart="return false")
             div 로딩중...
         .preventHorizonMode(oncontextmenu="return false" ondragstart="return false" onselectstart="return false")
-            div 세로모드로 다시 돌려주세요
+            div 모바일/세로모드로 이용해주세요
         main
             #jsSlider.slider
                 include screens/start

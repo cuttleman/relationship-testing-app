@@ -1,7 +1,7 @@
-@media (min-height: 571px) and (max-height: 640px){
+@media (min-height:482px) and (max-height: 570px){
     body{
         .resorceLoading{
-            font-size: 14px;
+            font-size: 12px;
         }
         .slider{
             .start{
@@ -9,15 +9,15 @@
                     .content__row{
                         .topImage{
                             img.main{
-                                height: 105px;
+                                height: 90px;
                             }
                         }
                         .title{
                             div:nth-child(1){
-                                font-size: 24px;
+                                font-size: 22px;
                             }
                             div:nth-child(2){
-                                font-size: 27px;
+                                font-size: 26px;
                             }
                             div:nth-child(3){
                                 padding: 5px 7px;
@@ -26,15 +26,15 @@
                         }
                     }
                     .bookImage{
-                        margin: 20px;
+                        margin: 15px;
                         img{
-                            height: 170px;
+                            height: 180px;
                         }
                     }
                     .startBtn{
                         .button{
                             img:nth-child(1){
-                                height: 90px;
+                                height: 75px;
                             }
                         }
                     }
@@ -43,29 +43,29 @@
         }
         .question{
             .slide__content{
-                width: 87%;
+                width: 90%;
                 .topImage{
-                    top: -20px;
+                    top: -15px;
                 }
                 .content__row{
-                    margin-top: 20px;
-                    padding-top: 30px;
+                    margin-top: 22px;
+                    padding-top: 40px;
                     .count{
-                        top: -20px;
+                        top: -18px;
                         img{
-                            height: 37px;
+                            height: 35px;
                         }
                     }
                     .main{
                         .main__text{
                             margin-bottom: 20px;
                             span{
-                                font-size: 16px;
+                                font-size: 14px;
                             }
                         }
                         .main__image{
                             img{
-                                height: 180px;
+                                height: 160px;
                             }
                         }
                     }
@@ -73,7 +73,7 @@
                 .buttons{
                     .button{
                         padding: 8px 0;
-                        font-size: 14px;
+                        font-size: 13px;
                     }
                 }
             }
@@ -82,45 +82,45 @@
             .slide__content{
                 .content__row{
                     .questionTitle{
-                        font-size: 16px;  
-                        margin-bottom: 13px; 
+                        font-size: 15px;  
+                        margin-bottom: 10px; 
                         span{
                             focus{
-                                font-size: 17px;
+                                font-size: 16px;
                             }
                         }
                     }
                     .mainTitle{
                         span{
-                            font-size: 17px;
+                            font-size: 16px;
                         }
                     }
                 }
                 .bookImage{
-                    margin: 14px 0;
+                    margin: 15px 0;
                     img{
-                        height: 180px;
+                        height: 140px;
                     }
                 }
                 .loadingComment{
                     .comment{
                         span{
-                            font-size: 14px;
+                            font-size: 13px;
                         }
                     }
                     .loadingAnimation{
                         span{
-                            font-size: 12px;
+                            font-size: 11px;
                         }
                         .dot{
-                            width: 4px;
-                            height: 4px;
+                            width: 3px;
+                            height: 3px;
                         }
                     }
                     .resultBtn{
                         .button{
                             img{
-                                height: 105px;
+                                height: 90px;
                             }
                         }
                     }
@@ -133,10 +133,13 @@
                     .title{
                         .title__type{
                             span{
-                                font-size: 21px;
+                                font-size: 20px;
                             }
                         }
                         .title__battery{
+                            img{
+                                height: 14px;
+                            }
                             span{
                                 font-size: 12px;    
                             }
@@ -145,36 +148,36 @@
                     .content__row{
                         margin-top: 20px;
                         .mainImage{
-                            margin-bottom: 20px;
+                            margin-bottom: 15px;
                             img{
-                                height: 180px;
+                                height: 150px;
                             }
                         }
                         .info{
                             span{
-                                font-size: 17px;
+                                font-size: 15px;
                                 strong{
-                                    font-size: 23px;
+                                    font-size: 21px;
                                 }
                             }
                         }
                         .friends{
                             .good,
                             .bad{
-                                font-size: 14px;
+                                font-size: 12px;
                             }
                         }
                     }
-                }
-                .saveImageInfo{
-                    span{
-                        font-size: 8px;
+                    .saveImageInfo{
+                        span{
+                            font-size: 9.5px;
+                        }
                     }
                 }
                 .sharedSNS{
                     .sharedImage{
                         img{
-                            height: 34px;
+                            height: 31px;
                         }
                     }
                 }

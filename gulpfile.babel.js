@@ -19,13 +19,17 @@ const paths = {
     dest: "build",
     watch: "src/assets/scss/**/*.scss",
   },
+  configs: {
+    src: "src/assets/configs/**/*",
+    dest: "build/configs",
+  },
   js: {
     src: "src/assets/js/*.js",
     dest: "build",
     watch: "src/assets/js/**/*.js",
   },
   pug: {
-    src: "src/views/**/*.pug",
+    src: "src/views/**/index.pug",
     dest: "build",
     watch: "src/views/**/*.pug",
   },
@@ -70,6 +74,10 @@ function styles() {
     .pipe(gulp.dest(paths.scss.dest));
 }
 
+function configs() {
+  return gulp.src(paths.configs.src).pipe(gulp.dest(paths.configs.dest));
+}
+
 function template() {
   return gulp.src(paths.pug.src).pipe(pug()).pipe(gulp.dest(paths.pug.dest));
 }
@@ -83,7 +91,6 @@ function watch() {
 function server() {
   return gulp.src("build").pipe(
     webserver({
-      livereload: true,
       open: true,
     })
   );
@@ -93,8 +100,16 @@ function _deploy() {
   return gulp.src("build/**/*").pipe(ghPages());
 }
 
-export const dev = gulp.series([clean, styles, template, js, server, watch]);
+export const dev = gulp.series([
+  clean,
+  styles,
+  template,
+  js,
+  configs,
+  server,
+  watch,
+]);
 
-const build = gulp.series([clean, styles, template, js]);
+// const build = gulp.series([clean, styles, template, js]);
 
 export const deploy = gulp.series([publishClean, _deploy]);

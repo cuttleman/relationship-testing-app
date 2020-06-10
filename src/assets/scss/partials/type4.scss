@@ -14,6 +14,11 @@
             background-color: $type-four-battery;
         }
     }
+    .saveImageInfo{
+        span{
+            color: #80ACB9;
+        }
+    }
 }
 .type-four.show{
     display: flex;
