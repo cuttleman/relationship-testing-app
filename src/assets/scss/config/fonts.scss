@@ -1,27 +1,30 @@
 @font-face{
-    font-family: "SCDream5";
+    font-family: "SCDream";
     src: url("configs/fonts/SCDream5.eot");
     src: url("configs/fonts/SCDream5.eot?#iefix") format("embedded-opentype"),
     url("configs/fonts/SCDream5.woff2") format("woff2"),
-    url("configs/fonts/SCDream5.woff") format("woff"),
     url("configs/fonts/SCDream5.ttf") format("truetype");
+    src: local("※"), url("configs/fonts/SCDream5.woff2") format("woff2");
+    font-weight: 500;
     font-display: swap;
 }
 @font-face{
-    font-family: "SCDream6";
+    font-family: "SCDream";
     src: url("configs/fonts/SCDream6.eot");
     src: url("configs/fonts/SCDream6.eot?#iefix") format("embedded-opentype"),
     url("configs/fonts/SCDream6.woff2") format("woff2"),
-    url("configs/fonts/SCDream6.woff") format("woff"),
     url("configs/fonts/SCDream6.ttf") format("truetype");
+    src: local("※"), url("configs/fonts/SCDream6.woff2") format("woff2");
+    font-weight: 600;
     font-display: swap;
 }
 @font-face{
-    font-family: "SCDream7";
+    font-family: "SCDream";
     src: url("configs/fonts/SCDream7.eot");
     src: url("configs/fonts/SCDream7.eot?#iefix") format("embedded-opentype"),
     url("configs/fonts/SCDream7.woff2") format("woff2"),
-    url("configs/fonts/SCDream7.woff") format("woff"),
     url("configs/fonts/SCDream7.ttf") format("truetype");
+    src: local("※"), url("configs/fonts/SCDream7.woff2") format("woff2");
+    font-weight: 700;
     font-display: swap;
 }

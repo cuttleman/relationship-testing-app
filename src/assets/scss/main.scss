@@ -40,7 +40,8 @@ body,html {
         justify-content: center;
         align-items: center;
         font-size: 15px;
-        font-family: "SCDream5";
+        font-family: "SCDream";
+        font-weight: 500;
         div{
             animation: $loading;
         }
@@ -53,7 +54,8 @@ body,html {
         justify-content: center;
         align-items: center;
         font-size: 17px;
-        font-family: "SCDream5";
+        font-family: "SCDream";
+        font-weight: 500;
         background-color: $default-bg;
         z-index: 9999;
     }

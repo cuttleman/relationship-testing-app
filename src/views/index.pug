@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 html(lang="en")
     head
-        <!-- Global site tag (gtag.js) - Google Analytics -->
         script(async src="https://www.googletagmanager.com/gtag/js?id=UA-169195735-1")
         script.
             window.dataLayer = window.dataLayer || [];
@@ -15,10 +14,10 @@ html(lang="en")
         meta(property="og:image" content="")
         meta(property="og:title" content="재미로 보는 관계 유형 테스트")
         meta(property="og:description" content="나의 인간 관계 유형은?")
-        link(rel="stylesheet", href="styles.css")
         link(rel="preload" href="configs/fonts/SCDream5.woff2" as="font" type="font/woff2" crossorigin)
         link(rel="preload" href="configs/fonts/SCDream6.woff2" as="font" type="font/woff2" crossorigin)
         link(rel="preload" href="configs/fonts/SCDream7.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="stylesheet", href="styles.css")
         title 재미로 보는 관계 유형 테스트
     body
         .resorceLoading#jsResorceLoading(oncontextmenu="return false" ondragstart="return false" onselectstart="return false")
@@ -41,6 +40,5 @@ html(lang="en")
                 include screens/question11
                 include screens/loading
                 include screens/result
-        script(src="main.js")
-        <!-- Go to www.addthis.com/dashboard to customize your tools --> 
         script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ee203ac1b643f8e")
+        script(src="main.js")

@@ -37,21 +37,22 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                font-family: "SCDream";
                 div:nth-child(1){
-                    font-family: "SCDream6";
+                    font-weight: 600;
                     font-size: 30px;
                     margin-bottom: 7px;
                 }
                 div:nth-child(2){
-                    font-family: "SCDream7";
                     font-size: 38px;
+                    font-weight: 700;
                     color: #6e1717;
                     margin-bottom: 7px;
                 }
                 div:nth-child(3){
                     width: 100%;
                     text-align: center;
-                    font-family: "SCDream5";
+                    font-weight: 500;
                     padding: 7px 9px;
                     font-size: 15px;
                     color: $default-bg;
