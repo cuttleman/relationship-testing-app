@@ -110,6 +110,6 @@ export const dev = gulp.series([
   watch,
 ]);
 
-// const build = gulp.series([clean, styles, template, js]);
+const build = gulp.series([clean, styles, template, js, configs]);
 
-export const deploy = gulp.series([publishClean, _deploy]);
+export const deploy = gulp.series([publishClean, build, _deploy]);

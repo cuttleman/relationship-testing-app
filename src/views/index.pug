@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 html(lang="en")
     head
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        script(async src="https://www.googletagmanager.com/gtag/js?id=UA-169195735-1")
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-169195735-1');
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
         meta(name="HandheldFriendly" content="true")
         meta(property="og:image" content="")
-        meta(property="og:title" content="관태기 테스트")
-        meta(property="og:description" content="관계에 권태기가 온 건 아닐까?")
+        meta(property="og:title" content="재미로 보는 관계 유형 테스트")
+        meta(property="og:description" content="나의 인간 관계 유형은?")
         link(rel="stylesheet", href="styles.css")
         link(rel="preload" href="configs/fonts/SCDream5.woff2" as="font" type="font/woff2" crossorigin)
         link(rel="preload" href="configs/fonts/SCDream6.woff2" as="font" type="font/woff2" crossorigin)
         link(rel="preload" href="configs/fonts/SCDream7.woff2" as="font" type="font/woff2" crossorigin)
-        title 관태기 테스트
+        title 재미로 보는 관계 유형 테스트
     body
         .resorceLoading#jsResorceLoading(oncontextmenu="return false" ondragstart="return false" onselectstart="return false")
             div 로딩중...
@@ -34,4 +42,5 @@ html(lang="en")
                 include screens/loading
                 include screens/result
         script(src="main.js")
-        //- script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ec9216c01abc74d")
+        <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+        script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ee203ac1b643f8e")
