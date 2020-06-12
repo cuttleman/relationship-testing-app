@@ -34,7 +34,7 @@ export const resultCases = (selectNums = []) => {
     img.src = "configs/images/sharedImages/type4.png";
     sharedImage.appendChild(img);
   } else {
-    if (three === one || three === two || three === four) {
+    if (three === two || three === four) {
       main.classList.add("typeThree");
       typeThree.classList.add("show");
       img.src = "configs/images/sharedImages/type3.png";
@@ -48,6 +48,11 @@ export const resultCases = (selectNums = []) => {
       main.classList.add("typeFour");
       typeFour.classList.add("show");
       img.src = "configs/images/sharedImages/type4.png";
+      sharedImage.appendChild(img);
+    } else if (one === three) {
+      main.classList.add("typeOne");
+      typeOne.classList.add("show");
+      img.src = "configs/images/sharedImages/type1.png";
       sharedImage.appendChild(img);
     } else {
       main.classList.add("typeThree");
