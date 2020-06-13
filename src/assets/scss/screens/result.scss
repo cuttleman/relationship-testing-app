@@ -145,6 +145,10 @@
                 justify-content: center;
                 a{
                     margin: 0 1%;
+                    &:active{
+                        opacity: 0.6;
+                        transform: translateY(1px);
+                    }
                     .snsIcon{
                         width: 53px;
                     }

@@ -16,11 +16,8 @@ html(lang="en")
         meta(property="og:type" content="website")
         //- meta(property="og:url" content="https://jeokdanghi-relationship.com/")
         meta(property="og:image" content="https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/kongi.png")
-        meta(property="og:image:width" content="1200")
-        meta(property="og:image:height" content="630")
         meta(property="og:title" content="재미로 보는 관계 유형 테스트")
         meta(property="og:description" content="나의 인간 관계 유형은?")
-        meta(property="og:site_name" content="허밍버드 출판사")
         meta(property="twitter:card" content="summary_large_image")
         meta(property="twitter:image" content="https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/kongi.png")
         link(rel="preload" href="configs/fonts/SCDream5.woff2" as="font" type="font/woff2" crossorigin)
@@ -56,6 +53,13 @@ html(lang="en")
                 Kakao.Link.sendCustom({
                     templateId: 30195
                 })
+            }
+            document.getElementById("facebookBtn").onclick = function() {
+                FB.ui({
+                    display: 'popup',
+                    method: 'share',
+                    href: 'https://cocky-yalow-588613.netlify.app/',
+                }, function(response){});
             }
         //- script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ee203ac1b643f8e")
         script(src="main.js")
