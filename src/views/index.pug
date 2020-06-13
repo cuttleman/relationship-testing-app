@@ -9,10 +9,13 @@ html(lang="en")
         //-     gtag('js', new Date());
 
         //-     gtag('config', 'UA-169195735-1');
-        script(src="//developers.kakao.com/sdk/js/kakao.min.js")
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
         meta(name="HandheldFriendly" content="true")
+        //- Sharing SNS SDK 
+        script(src="//developers.kakao.com/sdk/js/kakao.min.js")
+        script(async defer src="https://connect.facebook.net/en_US/sdk.js")
+        //- og meta tag
         meta(property="og:type" content="website")
         //- meta(property="og:url" content="https://jeokdanghi-relationship.com/")
         meta(property="og:image" content="https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/kongi.png")
@@ -20,6 +23,7 @@ html(lang="en")
         meta(property="og:description" content="나의 인간 관계 유형은?")
         meta(property="twitter:card" content="summary_large_image")
         meta(property="twitter:image" content="https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/kongi.png")
+        //- preloading local fonts
         link(rel="preload" href="configs/fonts/SCDream5.woff2" as="font" type="font/woff2" crossorigin)
         link(rel="preload" href="configs/fonts/SCDream6.woff2" as="font" type="font/woff2" crossorigin)
         link(rel="preload" href="configs/fonts/SCDream7.woff2" as="font" type="font/woff2" crossorigin)
@@ -61,5 +65,13 @@ html(lang="en")
                     href: 'https://cocky-yalow-588613.netlify.app/',
                 }, function(response){});
             }
+            window.fbAsyncInit = function() {
+                FB.init({
+                appId            : '3343288875702944',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v7.0'
+                });
+            };
         //- script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ee203ac1b643f8e")
         script(src="main.js")
