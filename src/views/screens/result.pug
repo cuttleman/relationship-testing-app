@@ -7,6 +7,8 @@
         include ../partials/type4
         .sharedSNS(oncontextmenu="return false" ondragstart="return false" onselectstart="return false")
             .sharedImage
-                img(data-src="configs/images/types/resultBottom.png")
+                img(data-src="//hbird1005.dothome.co.kr/images/types/resultBottom.png" alt="")
             .addThis
-                .addthis_inline_share_toolbox_2pvo
+                a#kakao-link-btn(href="javascript:sendLink()")
+                    img(src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png")
+                //- .addthis_inline_share_toolbox_2pvo

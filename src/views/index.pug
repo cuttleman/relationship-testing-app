@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 html(lang="en")
     head
-        script(async src="https://www.googletagmanager.com/gtag/js?id=UA-169195735-1")
-        script.
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        //- 서비스 배포시 Unlock
+        //- script(async src="https://www.googletagmanager.com/gtag/js?id=UA-169195735-1")
+        //- script.
+        //-     window.dataLayer = window.dataLayer || [];
+        //-     function gtag(){dataLayer.push(arguments);}
+        //-     gtag('js', new Date());
 
-            gtag('config', 'UA-169195735-1');
+        //-     gtag('config', 'UA-169195735-1');
+        script(src="https://developers.kakao.com/sdk/js/kakao.js");
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
         meta(name="HandheldFriendly" content="true")
-        meta(property="og:image" content="")
+        meta(property="og:type" content="website")
+        //- meta(property="og:url" content="https://jeokdanghi-relationship.com/")
+        meta(property="og:image" content="https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/kongi.png")
+        meta(property="og:image:width" content="1200")
+        meta(property="og:image:height" content="630")
         meta(property="og:title" content="재미로 보는 관계 유형 테스트")
         meta(property="og:description" content="나의 인간 관계 유형은?")
+        meta(property="og:site_name" content="허밍버드 출판사")
+        meta(property="twitter:card" content="summary_large_image")
+        meta(property="twitter:image" content="https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/kongi.png")
         link(rel="preload" href="configs/fonts/SCDream5.woff2" as="font" type="font/woff2" crossorigin)
         link(rel="preload" href="configs/fonts/SCDream6.woff2" as="font" type="font/woff2" crossorigin)
         link(rel="preload" href="configs/fonts/SCDream7.woff2" as="font" type="font/woff2" crossorigin)

@@ -28,6 +28,7 @@
   },
   "scripts": {
     "start": "gulp dev",
+    "build": "gulp build",
     "deploy": "gulp deploy"
   }
 }
