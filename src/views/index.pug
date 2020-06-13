@@ -9,7 +9,7 @@ html(lang="en")
         //-     gtag('js', new Date());
 
         //-     gtag('config', 'UA-169195735-1');
-        script(src="//developers.kakao.com/sdk/js/kakao.js")
+        script(src="//developers.kakao.com/sdk/js/kakao.min.js")
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
         meta(name="HandheldFriendly" content="true")
@@ -53,17 +53,9 @@ html(lang="en")
             // input your appkey
             Kakao.init('f9d8205eef6f7b4200be77c0b94dfc8a')
             function sendLink() {
-                Kakao.Link.sendDefault({
-                objectType: 'feed',
-                content: {
-                    title: '딸기 치즈 케익',
-                    description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-                    imageUrl:
-                    'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-                    link: {
-                    mobileWebUrl: 'https://developers.kakao.com',
-                    webUrl: 'https://developers.kakao.com',
-                    },
-                }})};
-        script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ee203ac1b643f8e")
+                Kakao.Link.sendCustom({
+                    templateId: 30195
+                })
+            }
+        //- script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ee203ac1b643f8e")
         script(src="main.js")

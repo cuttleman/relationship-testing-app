@@ -129,6 +129,7 @@
         .sharedSNS{
             position: relative;
             z-index: 3;
+            width: 100%;
             .sharedImage{
                 margin-bottom: 10px;
                 display: flex;
@@ -138,10 +139,16 @@
                     height: 45px;
                 }
             }
-            .addThis{
+            .sharedIcons{
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                a{
+                    margin: 0 1%;
+                    .snsIcon{
+                        width: 53px;
+                    }
+                }
             }
         }
     }

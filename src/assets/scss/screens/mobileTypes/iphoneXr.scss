@@ -85,7 +85,7 @@
                         font-size: 22px;  
                         margin-bottom: 15px; 
                         span{
-                            focus{
+                            strong{
                                 font-size: 23px;
                             }
                         }
@@ -180,6 +180,13 @@
                     .sharedImage{
                         img{
                             height: 49px;
+                        }
+                    }
+                    .sharedIcons{
+                        a{
+                            .snsIcon{
+                                width: 53px;
+                            }
                         }
                     }
                 }
