@@ -52,7 +52,6 @@ html(lang="en")
                 include screens/loading
                 include screens/result
         script(type="text/javascript").
-            // input your appkey
             Kakao.init('f9d8205eef6f7b4200be77c0b94dfc8a')
             function sendLink() {
                 Kakao.Link.sendCustom({
@@ -60,19 +59,16 @@ html(lang="en")
                 })
             }
             document.getElementById("facebookBtn").onclick = function() {
-                FB.ui({
-                    display: 'popup',
-                    method: 'share',
-                    href: 'https://cocky-yalow-588613.netlify.app/',
-                }, function(response){});
-            }
-            window.fbAsyncInit = function() {
                 FB.init({
                 appId            : '3343288875702944',
                 autoLogAppEvents : true,
                 xfbml            : true,
                 version          : 'v7.0'
                 });
-            };            
-        //- script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ee203ac1b643f8e")
+                FB.ui({
+                    display: 'popup',
+                    method: 'share',
+                    href: 'https://cocky-yalow-588613.netlify.app/',
+                }, function(response){});
+            }          
         script(src="main.js")
