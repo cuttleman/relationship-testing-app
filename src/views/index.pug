@@ -49,5 +49,23 @@ html(lang="en")
                 include screens/question11
                 include screens/loading
                 include screens/result
+            a(id="kakao-link-btn" href="javascript:sendLink()")
+                img(src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png")
+        script(type="text/javascript").
+            // input your appkey
+            Kakao.init('f9d8205eef6f7b4200be77c0b94dfc8a')
+            function sendLink() {
+                Kakao.Link.sendDefault({
+                objectType: 'feed',
+                content: {
+                    title: '딸기 치즈 케익',
+                    description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+                    imageUrl:
+                    'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+                    link: {
+                    mobileWebUrl: 'https://developers.kakao.com',
+                    webUrl: 'https://developers.kakao.com',
+                    },
+                }})};
         script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ee203ac1b643f8e")
         script(src="main.js")
