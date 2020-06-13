@@ -1,4 +1,5 @@
 import { resultCases } from "./resultCases";
+import { getMobileOS } from "./getMobileOS";
 
 const selectBtn = document.querySelectorAll(".button");
 const first = document.querySelector(".slide:nth-child(1)");
@@ -105,6 +106,7 @@ const init = () => {
   document.documentElement.addEventListener("touchend", touchEndPrevent, false);
 
   window.addEventListener("load", () => {
+    getMobileOS();
     for (let i = 0; i < images.length; i++) {
       images[i].src = images[i].dataset.src;
     }
