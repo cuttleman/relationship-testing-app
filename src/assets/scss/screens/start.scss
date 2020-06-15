@@ -30,7 +30,7 @@
                 }
                 img.main{
                     margin-left: 10px;
-                    height: 150px;
+                    height: 130px;
                 }
             }
             .title{
@@ -61,31 +61,27 @@
                 }
             }
         }
-        .bookImage{
+        .mainImage{
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 25px 0;
+            margin-top: 7%;
             img{
-                height: 230px;
+                width: 100%;
             }
         }
         .startBtn {
-            margin-left: 20px;
-            width: fit-content;
+            margin-top: -20px;
             .button {
                 position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 img:nth-child(1){
-                    height: 105px;
+                    height: 100px;
                 }
                 img:nth-child(2){
                     position: absolute;
-                    top: 33%;
-                    left: 17%;
-                    height: 40%;
+                    top: 32%;
+                    left: 24%;
+                    height: 43%;
                     animation: $blinkBlink;
                 }
                 -webkit-tap-highlight-color: transparent;

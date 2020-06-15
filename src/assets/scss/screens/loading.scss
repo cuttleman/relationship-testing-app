@@ -1,6 +1,7 @@
 @import "../config/_colors";
 @import "../config/_animation";
 .loading{
+    background-color: white;
     &#prev{
         animation: $activeElSlide;
     }
@@ -18,24 +19,32 @@
             align-items: center;
             justify-content: center;
             .questionTitle{
+                position: relative;
                 text-align: center;
                 line-height: 1.4;
-                font-size: 21px;
+                font-size: 18px;
                 margin-bottom: 17px;
                 span {
                     font-family: "SCDream";
                     font-weight: 500;
                     strong{
                         color: #ed6461;
-                        font-size: 22px;
+                        font-size: 19px;
                     }
+                }
+                img{
+                    width: 105%;
+                    position: absolute;
+                    bottom: 0;
+                    left: -3px;
+                    z-index: -1;
                 }
             }
             .mainTitle{
                 text-align: center;
                 line-height: 1.5;
                 span{
-                    font-size: 22px;
+                    font-size: 19px;
                     font-family: "SCDream";
                     font-weight: 600;
                     strong{
@@ -45,9 +54,11 @@
             }
         }
         .bookImage{
-            margin: 40px 0;
+            margin-top: 5%;
+            display: flex;
+            justify-content: center;
             img{
-                height: 260px;
+                width: 100%;
             }
         }
         .loadingComment{
@@ -58,7 +69,7 @@
                 text-align: center;
                 line-height: 1.2;
                 span{
-                    font-size: 17px;
+                    font-size: 13px;
                     font-family: "SCDream";
                     font-weight: 500;
                     color: rgb(141, 87, 85);
@@ -80,7 +91,7 @@
                     font-family: "SCDream";
                     font-weight: 500;
                     color: rgb(255, 255, 255);
-                    font-size: 15px;
+                    font-size: 14px;
                     margin: 0 5px;
                 }
                 .dot{
@@ -110,7 +121,7 @@
                 pointer-events: none;
                 .button{
                     img{
-                        height: 130px;
+                        height: 80px;
                         animation: ready 1s linear infinite;
                     }
                     -webkit-tap-highlight-color: transparent;

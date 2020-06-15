@@ -25,16 +25,10 @@
                             }
                         }
                     }
-                    .bookImage{
-                        margin: 20px;
-                        img{
-                            height: 170px;
-                        }
-                    }
-                    .startBtn{
-                        .button{
+                    .startBtn {
+                        .button {
                             img:nth-child(1){
-                                height: 90px;
+                                height: 80px;
                             }
                         }
                     }
@@ -49,7 +43,7 @@
                 }
                 .content__row{
                     margin-top: 20px;
-                    padding-top: 30px;
+                    padding-top: 60px;
                     .count{
                         top: -20px;
                         img{
@@ -58,7 +52,7 @@
                     }
                     .main{
                         .main__text{
-                            margin-bottom: 20px;
+                            margin-bottom: 25px;
                             span{
                                 font-size: 16px;
                             }
@@ -82,35 +76,29 @@
             .slide__content{
                 .content__row{
                     .questionTitle{
-                        font-size: 16px;  
+                        font-size: 14px;  
                         margin-bottom: 13px; 
                         span{
                             strong{
-                                font-size: 17px;
+                                font-size: 15px;
                             }
                         }
                     }
                     .mainTitle{
                         span{
-                            font-size: 17px;
+                            font-size: 15px;
                         }
-                    }
-                }
-                .bookImage{
-                    margin: 14px 0;
-                    img{
-                        height: 180px;
                     }
                 }
                 .loadingComment{
                     .comment{
                         span{
-                            font-size: 14px;
+                            font-size: 11px;
                         }
                     }
                     .loadingAnimation{
                         span{
-                            font-size: 12px;
+                            font-size: 11px;
                         }
                         .dot{
                             width: 4px;
@@ -120,7 +108,7 @@
                     .resultBtn{
                         .button{
                             img{
-                                height: 105px;
+                                height: 70px;
                             }
                         }
                     }

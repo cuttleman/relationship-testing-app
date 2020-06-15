@@ -2,15 +2,16 @@
 html(lang="en")
     head
         //- 서비스 배포시 Unlock
-        //- script(async src="https://www.googletagmanager.com/gtag/js?id=UA-169195735-2")
-        //- script.
-        //-     window.dataLayer = window.dataLayer || [];
-        //-     function gtag(){dataLayer.push(arguments);}
-        //-     gtag('js', new Date());
-        //-     gtag('config', 'UA-169195735-2');
+        script(async src="https://www.googletagmanager.com/gtag/js?id=UA-169195735-2")
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-169195735-2');
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
         meta(name="HandheldFriendly" content="true")
+        link(rel="shortcut icon" href="configs/image/favicon32.png")
         //- Sharing SNS SDK 
         script(src="//developers.kakao.com/sdk/js/kakao.min.js")
         script(async defer src="https://connect.facebook.net/en_US/sdk.js")
@@ -20,11 +21,11 @@ html(lang="en")
         //- og meta tag
         meta(property="og:type" content="website")
         meta(property="og:url" content="https://jeokdanghi-relationship.com/")
-        meta(property="og:image" content="https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/kongi.png")
+        meta(property="og:image" content="https://hbird1005.dothome.co.kr/images/sharedImages/snsShared.png")
         meta(property="og:title" content="재미로 보는 관계 유형 테스트")
         meta(property="og:description" content="나의 인간 관계 유형은?")
         meta(property="twitter:card" content="summary_large_image")
-        meta(property="twitter:image" content="https://front-juno.github.io/images-fonts/images/%EA%B4%80%ED%83%9C%EA%B8%B0/kongi.png")
+        meta(property="twitter:image" content="https://hbird1005.dothome.co.kr/images/sharedImages/snsShared.png")
         //- preloading local fonts
         link(rel="preload" href="configs/fonts/SCDream5.woff2" as="font" type="font/woff2" crossorigin)
         link(rel="preload" href="configs/fonts/SCDream6.woff2" as="font" type="font/woff2" crossorigin)
@@ -36,6 +37,8 @@ html(lang="en")
             div 로딩중...
         .preventHorizonMode(oncontextmenu="return false" ondragstart="return false" onselectstart="return false")
             div 모바일/세로모드로 이용해주세요
+        //- .desktopScreen(oncontextmenu="return false" ondragstart="return false" onselectstart="return false")
+        //-         include screens/desktop
         main
             #jsSlider.slider
                 include screens/start

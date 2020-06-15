@@ -1,9 +1,13 @@
+@import "../../config/_colors";
 @media screen and (orientation: landscape) {
     html{
         body{
             .preventHorizonMode{
                 display: flex;
             }
+            // .desktopScreen{
+            //     display: none;
+            // }
         }
     }
 }

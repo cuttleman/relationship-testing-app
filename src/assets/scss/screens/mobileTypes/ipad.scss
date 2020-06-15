@@ -27,16 +27,11 @@
                         }
                     }
                     .bookImage{
-                        margin: 25px;
-                        img{
-                            height: 270px;
-                        }
+                        margin: 25px 0;
                     }
-                    .startBtn{
-                        .button{
-                            img:nth-child(1){
-                                height: 130px;
-                            }
+                    .startBtn {
+                        .button {
+                            width: 200px;
                         }
                     }
                 }
@@ -83,37 +78,31 @@
             .slide__content{
                 .content__row{
                     .questionTitle{
-                        font-size: 26px;  
+                        font-size: 25px;  
                         margin-bottom: 18px; 
                         span{
                             strong{
-                                font-size: 27px;
+                                font-size: 26px;
                             }
                         }
                     }
                     .mainTitle{
                         span{
-                            font-size: 27px;
+                            font-size: 26px;
                         }
-                    }
-                }
-                .bookImage{
-                    margin: 25px 0;
-                    img{
-                        height: 280px;
                     }
                 }
                 .loadingComment{
                     .comment{
                         span{
-                            font-size: 21px;
+                            font-size: 20px;
                         }
                     }
                     .loadingAnimation{
                         padding: 10px 20px;
                         border-radius: 17px;
                         span{
-                            font-size: 20px;
+                            font-size: 18px;
                         }
                         .dot{
                             width: 7px;
@@ -123,7 +112,7 @@
                     .resultBtn{
                         .button{
                             img{
-                                height: 140px;
+                                height: 110px;
                             }
                         }
                     }

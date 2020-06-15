@@ -61,7 +61,7 @@ const nextSlideEvent = (duration = 0, event = null) => {
         loadingEl.innerHTML = "<span>분석 완료</span>";
         resultGoEl.style.opacity = "1";
         resultGoEl.style.pointerEvents = "initial";
-      }, 4000);
+      }, 2500);
     }
     // result image convert
     if (selectNums.length === 12) {
