@@ -24,7 +24,7 @@ const paths = {
     dest: "build/configs",
   },
   js: {
-    src: "src/assets/js/*.js",
+    src: "src/assets/js/main.js",
     dest: "build",
     watch: "src/assets/js/**/*.js",
   },
@@ -56,7 +56,6 @@ function js() {
       })
     )
     .pipe(uglify())
-    .pipe(concat("main.js"))
     .pipe(gulp.dest(paths.js.dest));
 }
 
