@@ -74,6 +74,17 @@
         }
         .loading{
             .slide__content{
+                .loadingCloud{
+                    &:nth-child(1){
+                        height: 75px;
+                    }
+                    &:nth-child(2){
+                        height: 68px;
+                    }
+                    &:nth-child(3){
+                        height: 55px;
+                    }
+                }
                 .content__row{
                     .questionTitle{
                         font-size: 17px;  
@@ -88,6 +99,11 @@
                         span{
                             font-size: 18px;
                         }
+                    }
+                }
+                .bookImage{
+                    img{
+                        height: 300px;
                     }
                 }
                 .loadingComment{

@@ -5,9 +5,13 @@
             .preventHorizonMode{
                 display: flex;
             }
-            // .desktopScreen{
-            //     display: none;
-            // }
+        }
+    }
+}
+@media (min-width: 700px){
+    html{
+        body{
+            display: none;
         }
     }
 }
