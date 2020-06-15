@@ -78,14 +78,16 @@ html(lang="en")
             
             const clipboard = new ClipboardJS('#clipBoardBtn');
             clipboard.on('success', function(e) {
-                swal("서점링크 복사 완료",{
+                swal("서점 링크 복사",{
+                    icon: "success",
                     button: false
                 });
                 setTimeout(()=>swal.close(),1100);
             });
 
             clipboard.on('error', function(e) {
-                swal("링크 복사 에러",{
+                swal({
+                    icon: "error",
                     button: false
                 });
                 setTimeout(()=>swal.close(),1100);

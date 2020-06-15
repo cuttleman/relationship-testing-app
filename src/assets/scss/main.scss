@@ -26,21 +26,12 @@ body,html {
     user-select:none;
     -webkit-tap-highlight-color:rgba(0,0,0,0);
     .swal-modal {
-        background-color: rgba(255, 255, 255, 0.877);
+        background-color: white;
         border: none;
         border-radius: 20px;
-        width: fit-content;
-        height: fit-content;
+        width: 160px;
+        height: 183px;
     }
-    .swal-text {
-        display: block;
-        text-align: center;
-        margin: 10px;
-        font-family: "SCDream";
-        font-weight: 500;
-        font-size: 15px;
-        color: black;
-      }
     &:hover{
         cursor: default;
     }
