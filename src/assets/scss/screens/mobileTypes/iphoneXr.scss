@@ -91,9 +91,12 @@
                     }
                 }
                 .loadingComment{
-                    .comment{
-                        span{
-                            font-size: 14px;
+                    .resultBtn{
+                        margin-top: 10px;
+                        .button{
+                            img{
+                                height: 85px;
+                            }
                         }
                     }
                     .loadingAnimation{
@@ -107,12 +110,9 @@
                             height: 5px;
                         }
                     }
-                    .resultBtn{
-                        margin-top: 10px;
-                        .button{
-                            img{
-                                height: 85px;
-                            }
+                    .comment{
+                        span{
+                            font-size: 14px;
                         }
                     }
                 }
