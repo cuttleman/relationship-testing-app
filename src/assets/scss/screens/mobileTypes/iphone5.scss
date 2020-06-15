@@ -3,6 +3,9 @@
         .resorceLoading{
             font-size: 12px;
         }
+        .swal-text {
+            font-size: 13px;
+        }
         .slider{
             .start{
                 .slide__content{
@@ -178,6 +181,13 @@
                     .sharedImage{
                         img{
                             height: 31px;
+                        }
+                    }
+                    .sharedIcons{
+                        a{
+                            .snsIcon{
+                                width: 40px;
+                            }
                         }
                     }
                 }

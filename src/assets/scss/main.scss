@@ -22,6 +22,22 @@ body,html {
     -webkit-user-select:none;
     user-select:none;
     -webkit-tap-highlight-color:rgba(0,0,0,0);
+    .swal-modal {
+        background-color: rgba(255, 255, 255, 0.788);
+        border: none;
+        border-radius: 20px;
+        width: fit-content;
+        height: fit-content;
+    }
+    .swal-text {
+        display: block;
+        text-align: center;
+        margin: 10px;
+        font-family: "SCDream";
+        font-weight: 500;
+        font-size: 15px;
+        color: black;
+      }
     &:hover{
         cursor: default;
     }

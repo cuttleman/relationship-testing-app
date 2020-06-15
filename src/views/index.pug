@@ -16,6 +16,7 @@ html(lang="en")
         script(async defer src="https://connect.facebook.net/en_US/sdk.js")
         script(type="text/javascript" async src="https://platform.twitter.com/widgets.js")
         script(src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js")
+        script(src="https://unpkg.com/sweetalert/dist/sweetalert.min.js")
         //- og meta tag
         meta(property="og:type" content="website")
         meta(property="og:url" content="https://jeokdanghi-relationship.com/")
@@ -74,10 +75,16 @@ html(lang="en")
             
             const clipboard = new ClipboardJS('#clipBoardBtn');
             clipboard.on('success', function(e) {
-                alert("서점링크 복사완료")
+                swal("서점링크 복사 완료",{
+                    button: false
+                });
+                setTimeout(()=>swal.close(),1100);
             });
 
             clipboard.on('error', function(e) {
-                alert("링크 복사 에러")
+                swal("링크 복사 에러",{
+                    button: false
+                });
+                setTimeout(()=>swal.close(),1100);
             });
         script(src="main.js")
