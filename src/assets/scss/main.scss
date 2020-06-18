@@ -87,6 +87,7 @@ body,html {
             background-color: $type-four;
             transition: all 0.8s linear;
         }
+        touch-action: none;
         display: none;
         flex-direction: column;
         justify-content: center;
