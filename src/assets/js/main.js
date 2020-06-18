@@ -7,6 +7,7 @@ const last = document.querySelector(".slide:nth-child(14)");
 const loadedMain = document.querySelector("main");
 const loadingAni = document.getElementById("jsResorceLoading");
 const images = document.querySelectorAll("img");
+const link = document.getElementById("clipBoardBtn");
 
 const selectNums = [];
 const nextSlideEvent = (duration = 0, event = null) => {
@@ -61,7 +62,7 @@ const nextSlideEvent = (duration = 0, event = null) => {
         loadingEl.innerHTML = "<span>분석 완료</span>";
         resultGoEl.style.opacity = "1";
         resultGoEl.style.pointerEvents = "initial";
-      }, 2500);
+      }, 2800);
     }
     // result image convert
     if (selectNums.length === 12) {
@@ -72,19 +73,33 @@ const nextSlideEvent = (duration = 0, event = null) => {
   }
 };
 
-const touchStartPrevent = (event) => {
-  if (event.touches.length > 1) {
-    event.preventDefault();
-  }
-};
+// const touchStartPrevent = (event) => {
+//   if (event.touches.length > 1) {
+//     event.preventDefault();
+//   }
+// };
 
-let lastTouchEnd = 0;
-const touchEndPrevent = (event) => {
-  const now = new Date().getTime();
-  if (now - lastTouchEnd <= 300) {
-    event.preventDefault();
+// let lastTouchEnd = 0;
+// const touchEndPrevent = (event) => {
+//   const now = new Date().getTime();
+//   if (now - lastTouchEnd <= 300) {
+//     event.preventDefault();
+//   }
+//   lastTouchEnd = now;
+// };
+
+const handleTrigger = () => {
+  if (typeof window.open == "function") {
+    setTimeout(() => {
+      window.open("https://book.naver.com/bookdb/book_detail.nhn?bid=14564271");
+    }, 1600);
+  } else {
+    setTimeout(() => {
+      window.location.href =
+        "https://book.naver.com/bookdb/book_detail.nhn?bid=14564271";
+    }, 1600);
   }
-  lastTouchEnd = now;
+  return false;
 };
 
 const init = () => {
@@ -98,12 +113,23 @@ const init = () => {
     "color: red; font-size: 20px; font-weight: bold;",
     "color: black; font-size: 15px; font-weight:bold;"
   );
-  document.documentElement.addEventListener(
-    "touchstart",
-    touchStartPrevent,
+  // document.documentElement.addEventListener(
+  //   "touchstart",
+  //   touchStartPrevent,
+  //   false
+  // );
+  // document.documentElement.addEventListener("touchend", touchEndPrevent, false);
+
+  document.addEventListener(
+    "touchmove",
+    function (event) {
+      event = event.originalEvent || event;
+      if (event.scale !== 1) {
+        event.preventDefault();
+      }
+    },
     false
   );
-  document.documentElement.addEventListener("touchend", touchEndPrevent, false);
 
   window.addEventListener("load", () => {
     getMobileOS();
@@ -113,7 +139,7 @@ const init = () => {
     setTimeout(() => {
       loadedMain.style.display = "flex";
       loadingAni.style.display = "none";
-    }, 1000);
+    }, 1500);
   });
 
   nextSlideEvent();
@@ -123,6 +149,8 @@ const init = () => {
       nextSlideEvent(600, event)
     ); // 딜레이 속도, 클릭이벤트
   }
+
+  link.addEventListener("click", handleTrigger);
 };
 
 init();

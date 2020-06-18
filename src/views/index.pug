@@ -23,7 +23,7 @@ html(lang="en")
         meta(property="og:url" content="https://jeokdanghi-relationship.com/")
         meta(property="og:image" content="https://hbird1005.dothome.co.kr/images/sharedImages/snsShared.png")
         meta(property="og:title" content="재미로 보는 관계 유형 테스트")
-        meta(property="og:description" content="나의 인간 관계 유형은?")
+        meta(property="og:description" content="나의 인간관계 유형은?")
         meta(property="twitter:card" content="summary_large_image")
         meta(property="twitter:image" content="https://hbird1005.dothome.co.kr/images/sharedImages/snsShared.png")
         //- preloading local fonts
@@ -36,9 +36,9 @@ html(lang="en")
         .resorceLoading#jsResorceLoading(oncontextmenu="return false" ondragstart="return false" onselectstart="return false")
             div 로딩중...
         .preventHorizonMode(oncontextmenu="return false" ondragstart="return false" onselectstart="return false")
-            div 모바일/세로모드로 이용해주세요
-        //- .desktopScreen(oncontextmenu="return false" ondragstart="return false" onselectstart="return false")
-        //-         include screens/desktop
+            div 세로모드로 이용해주세요
+        .desktopScreen(oncontextmenu="return false" ondragstart="return false" onselectstart="return false")
+                include screens/desktop
         main
             #jsSlider.slider
                 include screens/start
@@ -78,18 +78,12 @@ html(lang="en")
             
             const clipboard = new ClipboardJS('#clipBoardBtn');
             clipboard.on('success', function(e) {
-                swal("서점 링크 복사",{
+                swal("책 링크 복사",{
                     icon: "success",
                     button: false
                 });
-                setTimeout(()=>swal.close(),1100);
-            });
-
-            clipboard.on('error', function(e) {
-                swal({
-                    icon: "error",
-                    button: false
-                });
-                setTimeout(()=>swal.close(),1100);
+                setTimeout(()=>{
+                    swal.close();
+                },1300);
             });
         script(src="main.js")
