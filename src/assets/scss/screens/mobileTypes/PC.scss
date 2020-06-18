@@ -2,6 +2,7 @@
 @media screen and (orientation: landscape) {
     html{
         body{
+            overflow: hidden;
             .preventHorizonMode{
                 display: flex;
             }
@@ -14,6 +15,7 @@
 @media (min-width: 800px) and (orientation: landscape) {
     html{
         body{
+            overflow: hidden;
             .resorceLoading{
                 display: none;
             }

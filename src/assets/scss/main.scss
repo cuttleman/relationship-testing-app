@@ -4,6 +4,7 @@
 @media screen and (orientation: portrait){
     html{
         body{
+            overflow: hidden;
             .preventHorizonMode{
                 display: none;
             }
@@ -25,7 +26,14 @@ body,html {
     -webkit-user-select:none;
     user-select:none;
     -webkit-tap-highlight-color:rgba(0,0,0,0);
+    touch-action: manipulation;
     .swal-modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
         background-color: white;
         border: none;
         border-radius: 20px;
@@ -86,7 +94,6 @@ body,html {
             background-color: $type-four;
             transition: all 0.8s linear;
         }
-        touch-action: none;
         display: none;
         flex-direction: column;
         justify-content: center;
