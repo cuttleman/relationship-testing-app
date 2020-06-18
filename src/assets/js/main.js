@@ -73,20 +73,20 @@ const nextSlideEvent = (duration = 0, event = null) => {
   }
 };
 
-// const touchStartPrevent = (event) => {
-//   if (event.touches.length > 1) {
-//     event.preventDefault();
-//   }
-// };
+const touchStartPrevent = (event) => {
+  if (event.touches.length > 1) {
+    event.preventDefault();
+  }
+};
 
-// let lastTouchEnd = 0;
-// const touchEndPrevent = (event) => {
-//   const now = new Date().getTime();
-//   if (now - lastTouchEnd <= 300) {
-//     event.preventDefault();
-//   }
-//   lastTouchEnd = now;
-// };
+let lastTouchEnd = 0;
+const touchEndPrevent = (event) => {
+  const now = new Date().getTime();
+  if (now - lastTouchEnd <= 300) {
+    event.preventDefault();
+  }
+  lastTouchEnd = now;
+};
 
 const handleTrigger = () => {
   if (typeof window.open == "function") {
@@ -113,23 +113,13 @@ const init = () => {
     "color: red; font-size: 20px; font-weight: bold;",
     "color: black; font-size: 15px; font-weight:bold;"
   );
-  // document.documentElement.addEventListener(
-  //   "touchstart",
-  //   touchStartPrevent,
-  //   false
-  // );
-  // document.documentElement.addEventListener("touchend", touchEndPrevent, false);
 
-  document.addEventListener(
-    "touchmove",
-    function (event) {
-      event = event.originalEvent || event;
-      if (event.scale !== 1) {
-        event.preventDefault();
-      }
-    },
+  document.documentElement.addEventListener(
+    "touchstart",
+    touchStartPrevent,
     false
   );
+  document.documentElement.addEventListener("touchend", touchEndPrevent, false);
 
   window.addEventListener("load", () => {
     getMobileOS();
