@@ -72,11 +72,11 @@
         }
         .buttons{
             width: 99%;
+            touch-action: auto;
             .button {
                 &:not(:last-child){
                     margin-bottom: 10px;
                 }
-                touch-action: initial;
                 width: 100%;
                 background-color: $selectBtn;
                 padding: 12px 0;

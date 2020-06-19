@@ -17,7 +17,7 @@ html(lang="en")
         script(async defer src="https://connect.facebook.net/en_US/sdk.js")
         script(type="text/javascript" async src="https://platform.twitter.com/widgets.js")
         script(src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js")
-        //- script(src="https://unpkg.com/sweetalert/dist/sweetalert.min.js")
+        script(src="https://unpkg.com/sweetalert/dist/sweetalert.min.js")
         //- og meta tag
         meta(property="og:type" content="website")
         meta(property="og:url" content="https://jeokdanghi-relationship.com/")
@@ -76,14 +76,14 @@ html(lang="en")
                 }, function(response){});
             }
             
-            //- const clipboard = new ClipboardJS('#clipBoardBtn');
-            //- clipboard.on('success', function(e) {
-            //-     swal("책 링크 복사",{
-            //-         icon: "success",
-            //-         button: false
-            //-     });
-            //-     setTimeout(()=>{
-            //-         swal.close();
-            //-     },1300);
-            //- });
+            const clipboard = new ClipboardJS('#clipBoardBtn');
+            clipboard.on('success', function(e) {
+                swal("책 링크 복사",{
+                    icon: "success",
+                    button: false
+                });
+                setTimeout(()=>{
+                    swal.close();
+                },1300);
+            });
         script(src="main.js")
