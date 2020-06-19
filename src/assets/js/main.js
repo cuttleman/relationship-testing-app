@@ -91,12 +91,14 @@ const touchEndPrevent = (event) => {
 const handleTrigger = () => {
   if (typeof window.open == "function") {
     setTimeout(() => {
-      window.open("https://book.naver.com/bookdb/book_detail.nhn?bid=14564271");
+      window.open(
+        "https://m.post.naver.com/viewer/postView.nhn?volumeNo=28488391&memberNo=2931549"
+      );
     }, 1600);
   } else {
     setTimeout(() => {
       window.location.href =
-        "https://book.naver.com/bookdb/book_detail.nhn?bid=14564271";
+        "https://m.post.naver.com/viewer/postView.nhn?volumeNo=28488391&memberNo=2931549";
     }, 1600);
   }
   return false;
