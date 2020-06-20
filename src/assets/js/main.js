@@ -127,10 +127,12 @@ const init = () => {
     for (let i = 0; i < images.length; i++) {
       images[i].src = images[i].dataset.src;
     }
-    getMobileOS();
     window.addEventListener("load", () => {
-      loadedMain.style.display = "flex";
-      loadingAni.style.display = "none";
+      getMobileOS();
+      setTimeout(() => {
+        loadedMain.style.display = "flex";
+        loadingAni.style.display = "none";
+      }, 1000);
     });
   });
 
