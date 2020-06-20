@@ -61,7 +61,7 @@ const nextSlideEvent = (duration = 0, event = null) => {
         loadingEl.innerHTML = "<span>분석 완료</span>";
         resultGoEl.style.opacity = "1";
         resultGoEl.style.pointerEvents = "initial";
-      }, 2800);
+      }, 2300);
     }
     // result image convert
     if (selectNums.length === 12) {
@@ -124,10 +124,8 @@ const init = () => {
   // 리소스 로딩 이벤트
   window.addEventListener("load", () => {
     getMobileOS();
-    setTimeout(() => {
-      loadedMain.style.display = "flex";
-      loadingAni.style.display = "none";
-    }, 1500);
+    loadedMain.style.display = "flex";
+    loadingAni.style.display = "none";
   });
 
   // 슬라이드 이벤트
