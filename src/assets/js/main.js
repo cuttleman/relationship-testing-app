@@ -123,13 +123,15 @@ const init = () => {
   document.documentElement.addEventListener("touchend", touchEndPrevent, false);
 
   // 리소스 로딩 이벤트
-  for (let i = 0; i < images.length; i++) {
-    images[i].src = images[i].dataset.src;
-  }
   window.addEventListener("load", () => {
+    for (let i = 0; i < images.length; i++) {
+      images[i].src = images[i].dataset.src;
+    }
     getMobileOS();
-    // loadedMain.style.display = "flex";
-    // loadingAni.style.display = "none";
+    setTimeout(() => {
+      loadedMain.style.display = "flex";
+      loadingAni.style.display = "none";
+    }, 2000);
   });
 
   // 슬라이드 이벤트
