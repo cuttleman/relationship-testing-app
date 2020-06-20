@@ -128,10 +128,8 @@ const init = () => {
   }
   window.addEventListener("load", () => {
     getMobileOS();
-    setTimeout(() => {
-      loadedMain.style.display = "flex";
-      loadingAni.style.display = "none";
-    }, 1500);
+    loadedMain.style.display = "flex";
+    loadingAni.style.display = "none";
   });
 
   // 슬라이드 이벤트
