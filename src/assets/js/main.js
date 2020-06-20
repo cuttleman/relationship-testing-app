@@ -127,13 +127,11 @@ const init = () => {
     for (let i = 0; i < images.length; i++) {
       images[i].src = images[i].dataset.src;
     }
-    window.addEventListener("load", () => {
-      getMobileOS();
-      setTimeout(() => {
-        loadedMain.style.display = "flex";
-        loadingAni.style.display = "none";
-      }, 1000);
-    });
+    setTimeout(() => {
+      loadedMain.style.display = "flex";
+      loadingAni.style.display = "none";
+    }, 1000);
+    getMobileOS();
   });
 
   // 슬라이드 이벤트
