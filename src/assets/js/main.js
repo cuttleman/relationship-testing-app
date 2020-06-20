@@ -123,17 +123,23 @@ const init = () => {
   document.documentElement.addEventListener("touchend", touchEndPrevent, false);
 
   // 리소스 로딩 이벤트
-  window.addEventListener("DOMContentLoaded", () => {
-    for (let i = 0; i < images.length; i++) {
-      images[i].src = images[i].dataset.src;
-    }
-    setTimeout(() => {
+  const imageLoaded = [];
+  for (let i = 0; i < images.length; i++) {
+    images[i].addEventListener("load", () => {
+      imageLoaded[i] = i;
+    });
+    if (imageLoaded.length > 20) {
       loadedMain.style.display = "flex";
       loadingAni.style.display = "none";
-    }, 1000);
-    getMobileOS();
-  });
+    } else {
+      window.addEventListener("load", () => {
+        loadedMain.style.display = "flex";
+        loadingAni.style.display = "none";
+      });
+    }
+  }
 
+  getMobileOS();
   // 슬라이드 이벤트
   nextSlideEvent();
 
