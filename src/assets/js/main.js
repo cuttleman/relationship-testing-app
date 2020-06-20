@@ -91,20 +91,19 @@ const touchEndPrevent = (event) => {
 const handleTrigger = () => {
   if (typeof window.open == "function") {
     setTimeout(() => {
-      window.open(
-        "https://m.post.naver.com/viewer/postView.nhn?volumeNo=28488391&memberNo=2931549"
-      );
+      window.open("https://book.naver.com/bookdb/book_detail.nhn?bid=16385789");
     }, 1600);
   } else {
     setTimeout(() => {
       window.location.href =
-        "https://m.post.naver.com/viewer/postView.nhn?volumeNo=28488391&memberNo=2931549";
+        "https://book.naver.com/bookdb/book_detail.nhn?bid=16385789";
     }, 1600);
   }
   return false;
 };
 
 const init = () => {
+  // 이미지 저작권 경고문
   console.warn(
     `
     %c저작권%c이 등록되어있는 작가의 일러스트입니다.
@@ -115,7 +114,7 @@ const init = () => {
     "color: red; font-size: 20px; font-weight: bold;",
     "color: black; font-size: 15px; font-weight:bold;"
   );
-
+  // 이미지 확대, 화면 드래그 prevent
   document.documentElement.addEventListener(
     "touchstart",
     touchStartPrevent,
@@ -123,6 +122,7 @@ const init = () => {
   );
   document.documentElement.addEventListener("touchend", touchEndPrevent, false);
 
+  // 리소스 로딩 이벤트
   window.addEventListener("load", () => {
     getMobileOS();
     for (let i = 0; i < images.length; i++) {
@@ -134,6 +134,7 @@ const init = () => {
     }, 1500);
   });
 
+  // 슬라이드 이벤트
   nextSlideEvent();
 
   for (let i = 0; i < selectBtn.length; i++) {
@@ -142,6 +143,7 @@ const init = () => {
     ); // 딜레이 속도, 클릭이벤트
   }
 
+  // 책 링크 공유 이벤트
   link.addEventListener("click", handleTrigger);
 };
 

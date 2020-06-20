@@ -2,12 +2,12 @@
 html(lang="en")
     head
         //- 서비스 배포시 Unlock
-        //- script(async src="https://www.googletagmanager.com/gtag/js?id=UA-169195735-2")
-        //- script.
-        //-     window.dataLayer = window.dataLayer || [];
-        //-     function gtag(){dataLayer.push(arguments);}
-        //-     gtag('js', new Date());
-        //-     gtag('config', 'UA-169195735-2');
+        script(async src="https://www.googletagmanager.com/gtag/js?id=UA-169195735-2")
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-169195735-2');
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
         meta(name="HandheldFriendly" content="true")
@@ -18,6 +18,7 @@ html(lang="en")
         script(type="text/javascript" async src="https://platform.twitter.com/widgets.js")
         script(src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js")
         script(src="https://unpkg.com/sweetalert/dist/sweetalert.min.js")
+        script(src="https://hammerjs.github.io/dist/hammer.min.js")
         //- og meta tag
         meta(property="og:type" content="website")
         meta(property="og:url" content="https://jeokdanghi-relationship.com/")
@@ -30,6 +31,7 @@ html(lang="en")
         link(rel="preload" href="configs/fonts/SCDream5.woff2" as="font" type="font/woff2" crossorigin)
         link(rel="preload" href="configs/fonts/SCDream6.woff2" as="font" type="font/woff2" crossorigin)
         link(rel="preload" href="configs/fonts/SCDream7.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="//hbird1005.dothome.co.kr/images/startPage/startMain.png" as="image" type="image/png")
         link(rel="stylesheet", href="styles.css")
         title 재미로 보는 관계 유형 테스트
     body
@@ -86,4 +88,6 @@ html(lang="en")
                     swal.close();
                 },1300);
             });
+            const hammer = new Hammer(document.querySelector("body"));
+            hammer.get('pinch').set({ enable: false });
         script(src="main.js")
