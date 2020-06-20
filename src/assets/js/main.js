@@ -124,8 +124,10 @@ const init = () => {
   // 리소스 로딩 이벤트
   window.addEventListener("load", () => {
     getMobileOS();
-    loadedMain.style.display = "flex";
-    loadingAni.style.display = "none";
+    setTimeout(() => {
+      loadedMain.style.display = "flex";
+      loadingAni.style.display = "none";
+    }, 1500);
   });
 
   // 슬라이드 이벤트
