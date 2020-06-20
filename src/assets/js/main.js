@@ -6,6 +6,7 @@ const first = document.querySelector(".slide:nth-child(1)");
 const last = document.querySelector(".slide:nth-child(14)");
 const loadedMain = document.querySelector("main");
 const loadingAni = document.getElementById("jsResorceLoading");
+const images = document.querySelectorAll("img");
 const link = document.getElementById("clipBoardBtn");
 
 const selectNums = [];
@@ -61,7 +62,7 @@ const nextSlideEvent = (duration = 0, event = null) => {
         loadingEl.innerHTML = "<span>분석 완료</span>";
         resultGoEl.style.opacity = "1";
         resultGoEl.style.pointerEvents = "initial";
-      }, 2300);
+      }, 2800);
     }
     // result image convert
     if (selectNums.length === 12) {
@@ -124,8 +125,11 @@ const init = () => {
   // 리소스 로딩 이벤트
   window.addEventListener("load", () => {
     getMobileOS();
-    loadingAni.style.display = "none";
+    for (let i = 0; i < images.length; i++) {
+      images[i].src = images[i].dataset.src;
+    }
     loadedMain.style.display = "flex";
+    loadingAni.style.display = "none";
   });
 
   // 슬라이드 이벤트
