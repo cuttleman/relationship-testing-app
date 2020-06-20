@@ -128,8 +128,8 @@ const init = () => {
   }
   window.addEventListener("load", () => {
     getMobileOS();
-    loadedMain.style.display = "flex";
-    loadingAni.style.display = "none";
+    // loadedMain.style.display = "flex";
+    // loadingAni.style.display = "none";
   });
 
   // 슬라이드 이벤트
