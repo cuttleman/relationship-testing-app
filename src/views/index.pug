@@ -20,7 +20,7 @@ html(lang="en")
         script(src="https://unpkg.com/sweetalert/dist/sweetalert.min.js")
         //- og meta tag
         meta(property="og:type" content="website")
-        meta(property="og:url" content="https://jeokdanghi-relationship.com/")
+        meta(property="og:url" content="https://jeokdanghi-relationship.com")
         meta(property="og:image" content="https://hbird1005.dothome.co.kr/images/sharedImages/snsShared.png")
         meta(property="og:title" content="재미로 보는 관계 유형 테스트")
         meta(property="og:description" content="나의 인간관계 유형은?")
@@ -59,13 +59,18 @@ html(lang="en")
             Kakao.init('f9d8205eef6f7b4200be77c0b94dfc8a')
             function sendLink() {
                 const resultSharedImage = document.getElementById("resultSharedImage").src;
-                Kakao.Link.sendCustom({
-                    templateId: 30195,
-                    templateArgs:{
-                        title:"재미로 보는 관계 유형 테스트",
-                        description:"나의 인간관계 유형은?",
-                        imageUrl: "${resultSharedImage}"
-                    }
+                console.log(resultSharedImage);
+                Kakao.Link.sendDefault({
+                    objectType: "feed",
+                    content: {
+                        title: "재미로 보는 관계 유형 테스트",
+                        description: "나의 인간관계 유형은?",
+                        imageUrl: resultSharedImage,
+                        link: {
+                            mobileWebUrl: "https://jeokdanghi-relationship.com",
+                            webUrl: "https://jeokdanghi-relationship.com",
+                        },
+                    },
                 })
             }
             document.getElementById("facebookBtn").onclick = function() {
