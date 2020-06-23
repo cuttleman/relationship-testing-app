@@ -56,16 +56,15 @@ html(lang="en")
                 include screens/loading
                 include screens/result
         script(type="text/javascript").
-            Kakao.init("f9d8205eef6f7b4200be77c0b94dfc8a");
+            Kakao.init('f9d8205eef6f7b4200be77c0b94dfc8a')
             function sendLink() {
-                const resultSharedImage = document.getElementById("resultSharedImage");
                 Kakao.Link.sendCustom({
                     templateId: 30195,
-                    templateArgs: {
-                        imageUrl: resultSharedImage.src 
-                    },
+                    templateArgs:{
+                        imageUrl: "https://hbird1005.dothome.co.kr/images/sharedImages/snsShared.png"
+                    }
                 })
-            };
+            }
             document.getElementById("facebookBtn").onclick = function() {
                 FB.init({
                 appId            : '3343288875702944',
