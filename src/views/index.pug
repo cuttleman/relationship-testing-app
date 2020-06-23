@@ -59,17 +59,20 @@ html(lang="en")
             Kakao.init('f9d8205eef6f7b4200be77c0b94dfc8a')
             function sendLink() {
                 const resultSharedImage = document.getElementById("resultSharedImage").src;
-                console.log(resultSharedImage);
                 Kakao.Link.sendDefault({
                     objectType: "feed",
                     content: {
                         title: "재미로 보는 관계 유형 테스트",
                         description: "나의 인간관계 유형은?",
                         imageUrl: resultSharedImage,
+                        imageWidth: 850,
+                        imageHeight: 1160
+                        buttonTitle:"관계 유형 테스트하기"
                         link: {
                             mobileWebUrl: "https://jeokdanghi-relationship.com",
                             webUrl: "https://jeokdanghi-relationship.com",
                         },
+                        
                     },
                 })
             }
