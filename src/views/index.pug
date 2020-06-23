@@ -59,18 +59,12 @@ html(lang="en")
             Kakao.init("f9d8205eef6f7b4200be77c0b94dfc8a");
             function sendLink() {
                 const resultSharedImage = document.getElementById("resultSharedImage");
-                if(resultSharedImage){
-                    Kakao.Link.sendCustom({
-                        templateId: 30195,
-                        templateArgs: {
-                            imageUrl: resultSharedImage.src 
-                        },
-                    })
-                }else{
-                    Kakao.Link.sendCustom({
-                        templateId: 30195,
-                    })
-                }
+                Kakao.Link.sendCustom({
+                    templateId: 30195,
+                    templateArgs: {
+                        imageUrl: resultSharedImage.src 
+                    },
+                })
             };
             document.getElementById("facebookBtn").onclick = function() {
                 FB.init({
