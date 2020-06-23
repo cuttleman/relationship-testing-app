@@ -71,7 +71,6 @@ const nextSlideEvent = (duration = 0, event = null) => {
 
 export const sliderEvent = () => {
   nextSlideEvent(); // 첫페이지 로드
-
   for (let i = 0; i < selectBtn.length; i++) {
     selectBtn[i].addEventListener("click", (event) =>
       nextSlideEvent(600, event)

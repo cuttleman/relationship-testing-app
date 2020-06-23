@@ -2,12 +2,12 @@
 html(lang="en")
     head
         //- 서비스 배포시 Unlock
-        script(async src="https://www.googletagmanager.com/gtag/js?id=UA-169195735-2")
-        script.
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-169195735-2');
+        //- script(async src="https://www.googletagmanager.com/gtag/js?id=UA-169195735-2")
+        //- script.
+        //-     window.dataLayer = window.dataLayer || [];
+        //-     function gtag(){dataLayer.push(arguments);}
+        //-     gtag('js', new Date());
+        //-     gtag('config', 'UA-169195735-2');
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
         meta(name="HandheldFriendly" content="true")
@@ -56,12 +56,22 @@ html(lang="en")
                 include screens/loading
                 include screens/result
         script(type="text/javascript").
-            Kakao.init('f9d8205eef6f7b4200be77c0b94dfc8a')
+            Kakao.init("f9d8205eef6f7b4200be77c0b94dfc8a");
             function sendLink() {
-                Kakao.Link.sendCustom({
-                    templateId: 30195
-                })
-            }
+                const resultSharedImage = document.getElementById("resultSharedImage");
+                if(resultSharedImage){
+                    Kakao.Link.sendCustom({
+                        templateId: 30195,
+                        templateArgs: {
+                            imageUrl: resultSharedImage.src 
+                        },
+                    })
+                }else{
+                    Kakao.Link.sendCustom({
+                        templateId: 30195,
+                    })
+                }
+            };
             document.getElementById("facebookBtn").onclick = function() {
                 FB.init({
                 appId            : '3343288875702944',

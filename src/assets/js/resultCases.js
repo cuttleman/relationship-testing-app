@@ -12,6 +12,7 @@ export const resultCases = (selectNums = []) => {
 
   const sharedImage = document.querySelector(".resultImage");
   const img = document.createElement("img");
+  img.id = "resultSharedImage";
 
   if (one > two && one > three && one > four) {
     main.classList.add("typeOne");
