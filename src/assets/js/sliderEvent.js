@@ -61,7 +61,7 @@ const nextSlideEvent = (duration = 0, event = null) => {
       }, 2800);
     }
     // result image convert
-    if (selectNums.length === 11) {
+    if (selectNums.length === 12) {
       setTimeout(() => {
         resultCases(selectNums);
       }, duration);
