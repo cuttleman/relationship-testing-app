@@ -13,7 +13,7 @@ html(lang="en")
         meta(name="HandheldFriendly" content="true")
         link(rel="shortcut icon" href="configs/image/favicon32.png")
         //- Sharing SNS SDK 
-        script(src="https://developers.kakao.com/sdk/js/kakao.js")
+        script(src="https://developers.kakao.com/sdk/js/kakao.min.js")
         script(async defer src="https://connect.facebook.net/en_US/sdk.js")
         script(type="text/javascript" async src="https://platform.twitter.com/widgets.js")
         script(src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js")
@@ -58,34 +58,12 @@ html(lang="en")
         script(type="text/javascript").
             Kakao.init('f9d8205eef6f7b4200be77c0b94dfc8a')
             function sendLink() {
-                Kakao.Link.sendDefault({
-                    objectType: 'feed',
-                    content: {
-                        title: '딸기 치즈 케익',
-                        description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-                        imageUrl:
-                        'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-                        link: {
-                        mobileWebUrl: 'https://jeokdanghi-relationship.com',
-                        webUrl: 'https://jeokdanghi-relationship.com',
-                        },
-                    },
-                    buttons: [
-                        {
-                            title: '웹으로 보기',
-                            link: {
-                                mobileWebUrl: 'https://jeokdanghi-relationship.com',
-                                webUrl: 'https://jeokdanghi-relationship.com',
-                            },
-                        },
-                        {
-                            title: '앱으로 보기',
-                            link: {
-                                mobileWebUrl: 'https://jeokdanghi-relationship.com',
-                                webUrl: 'https://jeokdanghi-relationship.com',
-                            },
-                        },
-                    ],
+                const resultSharedImage = document.getElementById("resultSharedImage").src;
+                Kakao.Link.sendCustom({
+                    templateId: 30195,
+                    templateArgs:{
+                        imageUrl: ${resultSharedImage}
+                    }
                 })
             }
             document.getElementById("facebookBtn").onclick = function() {
