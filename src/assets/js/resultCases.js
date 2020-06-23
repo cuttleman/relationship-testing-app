@@ -12,51 +12,59 @@ export const resultCases = (selectNums = []) => {
 
   const sharedImage = document.querySelector(".resultImage");
   const img = document.createElement("img");
-  img.id = "resultSharedImage";
 
   if (one > two && one > three && one > four) {
     main.classList.add("typeOne");
+    img.id = "resultSharedImage";
     typeOne.classList.add("show");
     img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type1.png";
     sharedImage.appendChild(img);
   } else if (two > one && two > three && two > four) {
     main.classList.add("typeTwo");
+    img.id = "resultSharedImage";
     typeTwo.classList.add("show");
     img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type2.png";
     sharedImage.appendChild(img);
   } else if (three > one && three > two && three > four) {
     main.classList.add("typeThree");
+    img.id = "resultSharedImage";
     typeThree.classList.add("show");
     img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type3.png";
     sharedImage.appendChild(img);
   } else if (four > one && four > two && four > three) {
     main.classList.add("typeFour");
+    img.id = "resultSharedImage";
     typeFour.classList.add("show");
     img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type4.png";
     sharedImage.appendChild(img);
   } else {
     if (three === two || three === four) {
       main.classList.add("typeThree");
+      img.id = "resultSharedImage";
       typeThree.classList.add("show");
       img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type3.png";
       sharedImage.appendChild(img);
     } else if (two === one || two === four) {
       main.classList.add("typeTwo");
+      img.id = "resultSharedImage";
       typeTwo.classList.add("show");
       img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type2.png";
       sharedImage.appendChild(img);
     } else if (one === four) {
       main.classList.add("typeFour");
+      img.id = "resultSharedImage";
       typeFour.classList.add("show");
       img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type4.png";
       sharedImage.appendChild(img);
     } else if (one === three) {
       main.classList.add("typeOne");
+      img.id = "resultSharedImage";
       typeOne.classList.add("show");
       img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type1.png";
       sharedImage.appendChild(img);
     } else {
       main.classList.add("typeThree");
+      img.id = "resultSharedImage";
       typeThree.classList.add("show");
       img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type3.png";
       sharedImage.appendChild(img);
