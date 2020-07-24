@@ -9,7 +9,6 @@ export const resultCases = (selectNums = []) => {
   const two = selectNums.filter((num) => num === "2").length;
   const three = selectNums.filter((num) => num === "3").length;
   const four = selectNums.filter((num) => num === "4").length;
-  const metaTagImage = document.querySelector("meta[property='og:image']");
 
   const sharedImage = document.querySelector(".resultImage");
   const img = document.createElement("img");
@@ -17,66 +16,66 @@ export const resultCases = (selectNums = []) => {
   if (one > two && one > three && one > four) {
     main.classList.add("typeOne");
     typeOne.classList.add("show");
-    img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type1.png";
-    metaTagImage.content =
-      "https://hbird1005.dothome.co.kr/images/sharedImages/horizontal-type1.png";
+    img.id = "resultSharedImage";
+    img.src =
+      "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-one.png";
     sharedImage.appendChild(img);
   } else if (two > one && two > three && two > four) {
     main.classList.add("typeTwo");
     typeTwo.classList.add("show");
-    img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type2.png";
-    metaTagImage.content =
-      "https://hbird1005.dothome.co.kr/images/sharedImages/horizontal-type2.png";
+    img.id = "resultSharedImage";
+    img.src =
+      "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-two.png";
     sharedImage.appendChild(img);
   } else if (three > one && three > two && three > four) {
     main.classList.add("typeThree");
     typeThree.classList.add("show");
-    img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type3.png";
-    metaTagImage.content =
-      "https://hbird1005.dothome.co.kr/images/sharedImages/horizontal-type3.png";
+    img.id = "resultSharedImage";
+    img.src =
+      "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-three.png";
     sharedImage.appendChild(img);
   } else if (four > one && four > two && four > three) {
     main.classList.add("typeFour");
     typeFour.classList.add("show");
-    img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type4.png";
-    metaTagImage.content =
-      "https://hbird1005.dothome.co.kr/images/sharedImages/horizontal-type4.png";
+    img.id = "resultSharedImage";
+    img.src =
+      "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-four.png";
     sharedImage.appendChild(img);
   } else {
     if (three === two || three === four) {
       main.classList.add("typeThree");
       typeThree.classList.add("show");
-      img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type3.png";
-      metaTagImage.content =
-        "https://hbird1005.dothome.co.kr/images/sharedImages/horizontal-type3.png";
+      img.id = "resultSharedImage";
+      img.src =
+        "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-three.png";
       sharedImage.appendChild(img);
     } else if (two === one || two === four) {
       main.classList.add("typeTwo");
       typeTwo.classList.add("show");
-      img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type2.png";
-      metaTagImage.content =
-        "https://hbird1005.dothome.co.kr/images/sharedImages/horizontal-type2.png";
+      img.id = "resultSharedImage";
+      img.src =
+        "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-two.png";
       sharedImage.appendChild(img);
     } else if (one === four) {
       main.classList.add("typeFour");
       typeFour.classList.add("show");
-      img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type4.png";
-      metaTagImage.content =
-        "https://hbird1005.dothome.co.kr/images/sharedImages/horizontal-type4.png";
+      img.id = "resultSharedImage";
+      img.src =
+        "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-four.png";
       sharedImage.appendChild(img);
     } else if (one === three) {
       main.classList.add("typeOne");
       typeOne.classList.add("show");
-      img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type1.png";
-      metaTagImage.content =
-        "https://hbird1005.dothome.co.kr/images/sharedImages/horizontal-type1.png";
+      img.id = "resultSharedImage";
+      img.src =
+        "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-one.png";
       sharedImage.appendChild(img);
     } else {
       main.classList.add("typeThree");
       typeThree.classList.add("show");
-      img.src = "https://hbird1005.dothome.co.kr/images/sharedImages/type3.png";
-      metaTagImage.content =
-        "https://hbird1005.dothome.co.kr/images/sharedImages/horizontal-type3.png";
+      img.id = "resultSharedImage";
+      img.src =
+        "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-three.png";
       sharedImage.appendChild(img);
     }
   }
