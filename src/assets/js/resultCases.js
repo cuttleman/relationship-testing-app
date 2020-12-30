@@ -18,28 +18,28 @@ export const resultCases = (selectNums = []) => {
     typeOne.classList.add("show");
     img.id = "resultSharedImage";
     img.src =
-      "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-one.png";
+      "https://mestuss.github.io/images-fonts/images/jeokdanghi/sharedImages/type-one.png";
     sharedImage.appendChild(img);
   } else if (two > one && two > three && two > four) {
     main.classList.add("typeTwo");
     typeTwo.classList.add("show");
     img.id = "resultSharedImage";
     img.src =
-      "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-two.png";
+      "https://mestuss.github.io/images-fonts/images/jeokdanghi/sharedImages/type-two.png";
     sharedImage.appendChild(img);
   } else if (three > one && three > two && three > four) {
     main.classList.add("typeThree");
     typeThree.classList.add("show");
     img.id = "resultSharedImage";
     img.src =
-      "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-three.png";
+      "https://mestuss.github.io/images-fonts/images/jeokdanghi/sharedImages/type-three.png";
     sharedImage.appendChild(img);
   } else if (four > one && four > two && four > three) {
     main.classList.add("typeFour");
     typeFour.classList.add("show");
     img.id = "resultSharedImage";
     img.src =
-      "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-four.png";
+      "https://mestuss.github.io/images-fonts/images/jeokdanghi/sharedImages/type-four.png";
     sharedImage.appendChild(img);
   } else {
     if (three === two || three === four) {
@@ -47,35 +47,35 @@ export const resultCases = (selectNums = []) => {
       typeThree.classList.add("show");
       img.id = "resultSharedImage";
       img.src =
-        "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-three.png";
+        "https://mestuss.github.io/images-fonts/images/jeokdanghi/sharedImages/type-three.png";
       sharedImage.appendChild(img);
     } else if (two === one || two === four) {
       main.classList.add("typeTwo");
       typeTwo.classList.add("show");
       img.id = "resultSharedImage";
       img.src =
-        "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-two.png";
+        "https://mestuss.github.io/images-fonts/images/jeokdanghi/sharedImages/type-two.png";
       sharedImage.appendChild(img);
     } else if (one === four) {
       main.classList.add("typeFour");
       typeFour.classList.add("show");
       img.id = "resultSharedImage";
       img.src =
-        "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-four.png";
+        "https://mestuss.github.io/images-fonts/images/jeokdanghi/sharedImages/type-four.png";
       sharedImage.appendChild(img);
     } else if (one === three) {
       main.classList.add("typeOne");
       typeOne.classList.add("show");
       img.id = "resultSharedImage";
       img.src =
-        "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-one.png";
+        "https://mestuss.github.io/images-fonts/images/jeokdanghi/sharedImages/type-one.png";
       sharedImage.appendChild(img);
     } else {
       main.classList.add("typeThree");
       typeThree.classList.add("show");
       img.id = "resultSharedImage";
       img.src =
-        "https://front-juno.github.io/images-fonts/images/jeokdanghi/sharedImages/type-three.png";
+        "https://mestuss.github.io/images-fonts/images/jeokdanghi/sharedImages/type-three.png";
       sharedImage.appendChild(img);
     }
   }
